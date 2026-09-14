@@ -1,0 +1,3 @@
+[submodule "vendor/USC"]
+	path = vendor/USC
+	url = https://github.com/qingjiesjtu/USC.git

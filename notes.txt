@@ -1,0 +1,1 @@
+main working dir in wsl = /home/2026/research

@@ -1,0 +1,22 @@
+schema_version: "1.0.0"
+dataset: BoolQ validation from USC pinned commit
+source_commit: 69aa1012e2dfc4c57905bedf057c4e2fbc036101
+evaluation_mode: free_generation
+condition: confirmatory
+prompt_file: configs/prompts.yaml
+seed: 20260912
+decoding:
+  temperature: 0.0
+  seed: 20260912
+  num_predict: 4
+  repeat_penalty: 1.0
+model:
+  provider: ollama
+  model_id: qwen2.5:3b-instruct-q8_0
+  digest: null
+adaptation_reasons:
+  - different_model_family
+  - gguf_q8_quantization
+  - ollama_runtime
+  - ollama_chat_template
+  - subset_10

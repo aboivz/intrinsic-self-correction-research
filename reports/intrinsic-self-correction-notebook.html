@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audited BoolQ smoke replication: an interactive research notebook about intrinsic LLM self-correction.">
+  <title>Intrinsic Self-Correction — Research Notebook</title>
+  <style>
+    :root {
+      --ink: #162537;
+      --muted: #526273;
+      --paper: #f7f4ee;
+      --card: #fffdf9;
+      --line: #d9d2c6;
+      --navy: #163b5c;
+      --navy-soft: #e7f0f7;
+      --teal: #007d78;
+      --teal-soft: #e0f4ef;
+      --red: #b73a3c;
+      --red-soft: #fbe8e7;
+      --amber: #9b641b;
+      --amber-soft: #fbf0dc;
+      --violet: #654f9b;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(22, 37, 55, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font: 16px/1.65 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--navy); text-decoration-thickness: .09em; text-underline-offset: .16em; }
+    a:hover { color: var(--teal); }
+    :focus-visible { outline: 3px solid #e59a32; outline-offset: 3px; }
+    code, .mono { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; font-size: .91em; }
+    .math { font: 1.05em/1.5 Georgia, "Times New Roman", serif; letter-spacing: .01em; }
+    .wrap { width: min(1170px, calc(100% - 2rem)); margin: 0 auto; }
+    .eyebrow { margin: 0 0 .45rem; color: var(--navy); font-size: .75rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    h1, h2, h3 { color: var(--navy); line-height: 1.15; }
+    h1 { max-width: 850px; margin: .15em 0; font: clamp(2.4rem, 7vw, 5.6rem)/.96 Georgia, "Times New Roman", serif; letter-spacing: -.05em; }
+    h2 { margin: 0 0 1rem; font: clamp(1.75rem, 3vw, 2.6rem)/1.08 Georgia, "Times New Roman", serif; letter-spacing: -.035em; }
+    h3 { margin: 0 0 .45rem; font-size: 1.05rem; }
+    p { margin: 0 0 1rem; }
+    .lede { max-width: 760px; color: #33475a; font-size: clamp(1.08rem, 2vw, 1.32rem); }
+    .section { padding: 5.2rem 0; scroll-margin-top: 4rem; }
+    .section.alt { background: #eee9df; }
+    .section-head { max-width: 780px; margin-bottom: 2rem; }
+    .section-index { display: inline-block; width: 2.3rem; color: var(--teal); font: 1.08rem Georgia, serif; }
+    .hero { min-height: 92vh; display: grid; align-content: center; padding: 7rem 0 4rem; background: radial-gradient(circle at 85% 16%, #d7ede9 0, transparent 24rem), radial-gradient(circle at 5% 85%, #e5ecf0 0, transparent 30rem), var(--paper); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(260px, .65fr); gap: 3rem; align-items: end; }
+    .hero-question { margin: 1.5rem 0; padding: 1.1rem 1.3rem; border-left: 5px solid var(--teal); background: rgba(255,255,255,.64); font: 1.25rem/1.45 Georgia, serif; }
+    .meta-card, .card, .metric, .note, details, .conversation { border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+    .meta-card { padding: 1.25rem; }
+    .meta-card dl { margin: 0; }
+    .meta-card dt { margin-top: .85rem; color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .meta-card dt:first-child { margin-top: 0; }
+    .meta-card dd { margin: .15rem 0 0; font-weight: 650; }
+    .tag { display: inline-flex; align-items: center; gap: .38rem; padding: .3rem .65rem; border-radius: 999px; font-size: .78rem; font-weight: 800; letter-spacing: .02em; }
+    .tag::before { content: ""; width: .48rem; height: .48rem; border-radius: 50%; background: currentColor; }
+    .tag.verified { color: var(--navy); background: var(--navy-soft); }
+    .tag.interpretation { color: var(--amber); background: var(--amber-soft); }
+    .tag.hypothesis { color: var(--violet); background: #eeeafa; }
+    .tag.adaptation { color: var(--teal); background: var(--teal-soft); }
+    .tag.risk { color: var(--red); background: var(--red-soft); }
+    .actions { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+    button, .button {
+      min-height: 2.7rem; padding: .55rem .9rem; color: white; border: 1px solid var(--navy); border-radius: 8px; background: var(--navy); font: inherit; font-size: .9rem; font-weight: 750; cursor: pointer;
+    }
+    button:hover, .button:hover { color: white; background: #0d2d49; }
+    button.secondary { color: var(--navy); background: transparent; }
+    button.secondary:hover { color: var(--navy); background: var(--navy-soft); }
+    .toc { position: sticky; top: 0; z-index: 10; border-bottom: 1px solid rgba(217,210,198,.9); background: rgba(247,244,238,.94); backdrop-filter: blur(12px); }
+    .toc-inner { display: flex; gap: .35rem; overflow-x: auto; padding: .6rem 0; scrollbar-width: thin; }
+    .toc a { flex: 0 0 auto; padding: .32rem .57rem; color: var(--muted); border-radius: 6px; font-size: .78rem; font-weight: 750; text-decoration: none; }
+    .toc a:hover, .toc a[aria-current="true"] { color: var(--navy); background: var(--navy-soft); }
+    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+    .three-col { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    .card { padding: 1.35rem; }
+    .card p:last-child, .note p:last-child { margin-bottom: 0; }
+    .callout { padding: 1.15rem 1.25rem; border-left: 4px solid var(--navy); border-radius: 0 var(--radius) var(--radius) 0; background: var(--navy-soft); }
+    .callout.warning { border-left-color: var(--red); background: var(--red-soft); }
+    .callout.good { border-left-color: var(--teal); background: var(--teal-soft); }
+    .flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: .7rem; align-items: center; margin: 2rem 0; }
+    .flow-node { min-height: 9rem; padding: 1.15rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); box-shadow: var(--shadow); }
+    .flow-node strong { display: block; margin-bottom: .3rem; color: var(--navy); }
+    .flow-arrow { color: var(--teal); font-size: 1.9rem; font-weight: 800; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .comparison > div { padding: 1rem; border: 1px solid var(--line); border-radius: 10px; }
+    .comparison .yes { background: var(--teal-soft); }
+    .comparison .no { background: var(--red-soft); }
+    .matrix-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .88fr); gap: 1.5rem; align-items: start; }
+    .matrix { display: grid; grid-template-columns: 5.8rem repeat(2, minmax(100px, 1fr)); gap: .55rem; align-items: stretch; }
+    .matrix > div { min-height: 5.7rem; padding: .8rem; border-radius: 10px; }
+    .matrix .label { min-height: auto; padding: .35rem .2rem; color: var(--muted); font-size: .78rem; font-weight: 800; text-align: center; }
+    .matrix .side { display: flex; align-items: center; justify-content: center; writing-mode: vertical-rl; transform: rotate(180deg); }
+    .matrix button { min-height: 0; color: var(--ink); border: 2px solid transparent; text-align: left; box-shadow: none; }
+    .matrix button:hover, .matrix button.selected { border-color: var(--navy); transform: translateY(-2px); }
+    .matrix .cc { background: #e9f1ea; }
+    .matrix .cw { background: var(--red-soft); }
+    .matrix .wc { background: var(--teal-soft); }
+    .matrix .ww { background: #eee9e1; }
+    .matrix b { display: block; font-size: 1.28rem; }
+    .matrix small { display: block; color: var(--muted); }
+    .explain-panel { min-height: 250px; padding: 1.35rem; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+    .equation-block { margin: 1rem 0; padding: .95rem 1.1rem; overflow-x: auto; border-radius: 8px; background: #f2eee6; }
+    details { overflow: hidden; }
+    details summary { padding: 1rem 1.2rem; color: var(--navy); font-weight: 800; cursor: pointer; }
+    details > :not(summary) { margin: 0 1.2rem 1.2rem; }
+    details[open] summary { border-bottom: 1px solid var(--line); }
+    .metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .85rem; }
+    .metric { padding: 1.1rem; }
+    .metric .label { display: block; color: var(--muted); font-size: .76rem; font-weight: 800; letter-spacing: .07em; text-transform: uppercase; }
+    .metric .value { display: block; margin: .18rem 0; color: var(--navy); font: 2rem/1 Georgia, serif; }
+    .metric .detail { color: var(--muted); font-size: .82rem; }
+    .toggle { display: inline-flex; padding: .25rem; border: 1px solid var(--line); border-radius: 9px; background: #eee9e1; }
+    .toggle button { min-height: 2.25rem; color: var(--muted); border: 0; background: transparent; }
+    .toggle button[aria-pressed="true"] { color: var(--navy); background: var(--card); box-shadow: 0 1px 4px rgba(22,37,55,.12); }
+    .result-banner { display: grid; grid-template-columns: 1.3fr 1fr; gap: 1.1rem; padding: 1.35rem; border: 1px solid #d99e9f; border-radius: var(--radius); background: linear-gradient(120deg, #fff6f4, #fffdf9); }
+    .result-banner .headline { margin: 0; color: var(--red); font: clamp(2.1rem, 4vw, 3.7rem)/1 Georgia, serif; letter-spacing: -.04em; }
+    .stat-line { display: flex; justify-content: space-between; gap: 1rem; padding: .55rem 0; border-bottom: 1px solid var(--line); }
+    .stat-line:last-child { border-bottom: 0; }
+    .audit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    .conversation { padding: 1rem 1.15rem; }
+    .conversation[hidden] { display: none; }
+    .conversation summary { display: flex; justify-content: space-between; gap: .6rem; align-items: center; padding: 0; border: 0 !important; }
+    .conversation summary::marker { color: var(--teal); }
+    .conversation .conversation-title { color: var(--navy); font-weight: 800; }
+    .conversation > :not(summary) { margin-left: 0; margin-right: 0; }
+    .question { color: #2a3c4d; font: 1.05rem/1.45 Georgia, serif; }
+    .turns { display: grid; gap: .5rem; margin-top: .8rem; }
+    .turn { padding: .65rem .75rem; border-radius: 8px; }
+    .turn.user { background: #edf2f4; }
+    .turn.assistant { background: #f3eee6; }
+    .turn small { display: block; margin-bottom: .13rem; color: var(--muted); font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+    .compact { font-size: .88rem; }
+    .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+    table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+    th, td { padding: .8rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); background: #f4f0e8; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; }
+    tr:last-child td { border-bottom: 0; }
+    .not-comparable { margin: 1rem 0 0; color: var(--red); font-weight: 700; }
+    .claims { display: grid; gap: .8rem; }
+    .claim { padding: 1rem 1.1rem; border-left: 4px solid var(--line); background: rgba(255,255,255,.52); }
+    .claim.verified { border-left-color: var(--navy); }
+    .claim.interpretation { border-left-color: var(--amber); }
+    .claim.hypothesis { border-left-color: var(--violet); }
+    .question-list { margin: 0; padding-left: 1.3rem; }
+    .question-list li { margin: .65rem 0; padding-left: .25rem; }
+    .provenance { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem 1.5rem; }
+    .provenance div { padding-bottom: .6rem; border-bottom: 1px solid var(--line); }
+    .provenance dt { color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+    .provenance dd { margin: .18rem 0 0; overflow-wrap: anywhere; }
+    footer { padding: 2.5rem 0; color: var(--muted); font-size: .88rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @media (max-width: 860px) {
+      .hero-grid, .matrix-layout, .result-banner { grid-template-columns: 1fr; }
+      .two-col, .audit-grid, .comparison, .provenance { grid-template-columns: 1fr; }
+      .three-col { grid-template-columns: 1fr 1fr; }
+      .metric-grid { grid-template-columns: 1fr 1fr; }
+      .flow { grid-template-columns: 1fr; }
+      .flow-arrow { transform: rotate(90deg); text-align: center; }
+      .hero { min-height: auto; }
+    }
+    @media (max-width: 500px) {
+      .section { padding: 3.6rem 0; }
+      .wrap { width: min(100% - 1.25rem, 1170px); }
+      .three-col, .metric-grid { grid-template-columns: 1fr; }
+      .matrix { grid-template-columns: 4.1rem repeat(2, minmax(90px, 1fr)); }
+      .matrix > div { min-height: 5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+    @media print {
+      @page { margin: 12mm; size: A4; }
+      body { background: white; font-size: 10.5pt; }
+      .hero { min-height: auto; padding: 0 0 1rem; background: white; }
+      .toc, .actions, .toggle, .matrix button { display: none !important; }
+      .section { padding: 1.45rem 0; break-inside: avoid; }
+      .section.alt { background: white; }
+      .card, .metric, details, .conversation, .meta-card { box-shadow: none; }
+      details:not([open]) > :not(summary) { display: block !important; }
+      details summary { list-style: none; }
+      details summary::-webkit-details-marker { display: none; }
+      a { color: inherit; text-decoration: none; }
+      .conversation { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Research notebook · Supervisor meeting</p>
+        <p><span class="tag adaptation">Audited smoke adaptation</span></p>
+        <h1>Intrinsic<br>Self-Correction</h1>
+        <p class="lede">Một audit nhỏ về điều gì xảy ra khi LLM được hỏi: <em>“Are you sure?”</em></p>
+        <blockquote class="hero-question">“Khi model tự xem xét lại, recovery có lớn hơn regression không?”</blockquote>
+        <p class="compact">[Your name] · [Meeting date] · BoolQ audited smoke replication</p>
+        <div class="actions">
+          <a class="button" href="#result">Đi đến kết quả</a>
+          <button class="secondary" type="button" data-print>Print / Save PDF</button>
+        </div>
+      </div>
+      <aside class="meta-card" aria-label="Run snapshot">
+        <p class="eyebrow">Snapshot</p>
+        <dl>
+          <dt>Run</dt><dd class="mono">smoke-confirmatory-logprobs</dd>
+          <dt>Scope</dt><dd>10 samples · 20 round events</dd>
+          <dt>Model</dt><dd class="mono">qwen2.5:3b-instruct-q8_0</dd>
+          <dt>Evaluator</dt><dd class="mono">free_generation</dd>
+          <dt>Status</dt><dd>Integrity smoke, not hypothesis evidence</dd>
+        </dl>
+      </aside>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Nội dung">
+    <div class="wrap toc-inner">
+      <a href="#problem">Problem</a><a href="#fundamentals">Fundamentals</a><a href="#metrics">Metrics</a><a href="#experiment">Experiment</a><a href="#result">Result</a><a href="#audit">Audit</a><a href="#context">Context</a><a href="#limits">Limits</a><a href="#discussion">Discussion</a><a href="#appendix">Appendix</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section" id="problem">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">01</span> Problem statement</p>
+          <h2>“Đổi đáp án” không đồng nghĩa “sửa lỗi”.</h2>
+          <p>LLM có thể đổi từ sai sang đúng sau một prompt xác nhận. Nhưng cùng cơ chế đó có thể đảo một đáp án đúng thành sai. Câu hỏi nghiên cứu là <strong>net effect</strong>, không phải chỉ đếm số lần output thay đổi.</p>
+        </div>
+        <div class="two-col">
+          <article class="card">
+            <span class="tag verified">Verified context</span>
+            <h3>Điểm xuất phát</h3>
+            <p>ACL 2025 báo cáo rằng intrinsic self-correction có thể làm giảm accuracy trên Yes/No questions; paper phân tích cả correct-to-wrong và wrong-to-correct transitions.</p>
+            <p><a href="https://aclanthology.org/2025.acl-long.1314/">Đọc ACL 2025 paper</a></p>
+          </article>
+          <article class="card">
+            <span class="tag hypothesis">Working question</span>
+            <h3>Ta đang kiểm tra gì?</h3>
+            <p>Trong BoolQ smoke run, một confirmatory revision có tạo recovery đủ lớn để bù regression không?</p>
+            <p class="compact">Mục đích run này: validate experimental integrity. Không dùng <span class="mono">n=10</span> để xác nhận hay bác bỏ paper hypothesis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="fundamentals">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">02</span> Fundamentals</p>
+          <h2>Intrinsic revision chỉ dùng model và history của chính nó.</h2>
+          <p><strong>Intrinsic self-correction</strong> nghĩa là model nhận initial answer của chính nó và một revision prompt, không nhận ground truth, tool result, retrieved evidence hay human judgment.</p>
+        </div>
+        <div class="comparison">
+          <div class="yes"><h3>Trong scope</h3><p>Same model, raw initial answer, neutral confirmatory prompt, sequential conversation history.</p></div>
+          <div class="no"><h3>Ngoài scope</h3><p>“You are wrong”, answer key, BoolQ passage, web/tool lookup, reward model, oracle-only revision.</p></div>
+        </div>
+        <div class="flow" aria-label="Initial generation then revision flow">
+          <div class="flow-node"><strong>Round 0 · initial</strong><span class="math">y<sub>0</sub> ∼ p<sub>θ</sub>(· | x)</span><br><small>Question x → raw assistant output.</small></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node"><strong>Exact history</strong><small>User: initial prompt<br>Assistant: <em>raw y<sub>0</sub></em><br>User: revision prompt</small></div>
+          <div class="flow-arrow" aria-hidden="true">→</div>
+          <div class="flow-node"><strong>Round 1 · revised</strong><span class="math">y<sub>1</sub> ∼ p<sub>θ</sub>(· | x, y<sub>0</sub>, r)</span><br><small>Different conditional distribution.</small></div>
+        </div>
+        <div class="callout">
+          <strong>Key idea.</strong> Vì conditioning thay đổi, output flip tự nó không chứng minh model đã phát hiện lỗi hay có “stable internal belief” bị sửa.
+        </div>
+        <details>
+          <summary>Vì sao BoolQ passage không vào prompt?</summary>
+          <p>BoolQ source record có passage, nhưng intrinsic condition cố ý chỉ dùng question. Passage là external evidence tại inference time; đưa nó vào sẽ đổi research question. Đổi lại, một số question trở nên underspecified hoặc ambiguous. Đây là data-quality risk cần báo cáo, không phải lỗi parser.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section" id="metrics">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">03</span> Metric playground</p>
+          <h2>Transition matrix cho biết accuracy thay đổi vì đâu.</h2>
+          <p>Click một cell. Ma trận dùng correctness sau parsing; invalid/error vẫn tính là not-correct trong all-item metric.</p>
+        </div>
+        <div class="matrix-layout">
+          <div class="matrix" role="group" aria-label="Correctness transition matrix">
+            <div></div><div class="label">Revised: Correct</div><div class="label">Revised: Wrong</div>
+            <div class="label side">Initial</div>
+            <button class="cc selected" type="button" data-transition="CC"><b>CC · 4</b><small>correct → correct</small></button>
+            <button class="cw" type="button" data-transition="CW"><b>CW · 1</b><small>correct → wrong</small></button>
+            <div class="label side"></div>
+            <button class="wc" type="button" data-transition="WC"><b>WC · 0</b><small>wrong → correct</small></button>
+            <button class="ww" type="button" data-transition="WW"><b>WW · 5</b><small>wrong → wrong</small></button>
+          </div>
+          <aside class="explain-panel" id="transition-explanation" aria-live="polite">
+            <span class="tag verified">CC · retained correctness</span>
+            <h3>Đáp án đúng giữ nguyên</h3>
+            <p><strong>4 samples.</strong> Đây là phần stable correctness. CC tăng cả A0 và A1 nhưng không đóng góp trực tiếp vào ΔA.</p>
+            <p class="compact">Example: “Is New Zealand on the continent of Australia?” — <span class="mono">No → No</span>, label <span class="mono">No</span>.</p>
+          </aside>
+        </div>
+        <details open>
+          <summary>Expand equations và worked calculation</summary>
+          <div class="equation-block math">
+            A<sub>0</sub> = (CC + CW) / N = (4 + 1) / 10 = 50%<br>
+            A<sub>1</sub> = (CC + WC) / N = (4 + 0) / 10 = 40%<br>
+            ΔA = A<sub>1</sub> − A<sub>0</sub> = (WC − CW) / N = (0 − 1) / 10 = −10%
+          </div>
+          <div class="two-col compact">
+            <div><strong>Conditional recovery.</strong> <span class="math">u = WC / (WC + WW) = 0 / 5 = 0%</span>. Trong các initial-wrong items, không item nào được sửa.</div>
+            <div><strong>Conditional regression.</strong> <span class="math">v = CW / (CC + CW) = 1 / 5 = 20%</span>. Trong các initial-correct items, 1/5 bị đảo sai.</div>
+            <div><strong>Answer-change rate.</strong> Tỷ lệ parsed answers khác nhau giữa hai rounds: 1/10 = 10%.</div>
+            <div><strong>Valid-only accuracy.</strong> Báo cáo secondary; denominator chỉ gồm parsed valid outputs. Ở run này nó bằng all-item vì không có invalid/error.</div>
+          </div>
+        </details>
+        <details>
+          <summary>McNemar và bootstrap CI nói gì?</summary>
+          <p><strong>Exact two-sided McNemar</strong> chỉ dùng discordant pairs: CW và WC. Under no directional difference, mỗi discordant pair có xác suất 1/2 đi theo mỗi hướng. Ở đây có đúng một discordant pair, CW=1 và WC=0, nên <span class="mono">p=1</span>: dữ liệu quá ít để có evidence về directional effect.</p>
+          <p><strong>Paired bootstrap</strong> resample 10 paired trajectories 10,000 lần, không phá pairing giữa round 0 và round 1. CI 95% của ΔA là <span class="mono">[−30%, 0%]</span>. Wide interval là expected với n=10.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section alt" id="experiment">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">04</span> Experiment run</p>
+          <h2>Small, deterministic, and auditable.</h2>
+          <p>Đây là adaptation, không phải exact reproduction: model family, GGUF Q8, Ollama runtime/template và 10-item subset đều khác paper setting.</p>
+        </div>
+        <div class="three-col">
+          <article class="card"><h3>Data</h3><p><strong>10</strong> label-stratified samples từ BoolQ validation (3,270 source items). Một initial và một confirmatory revision mỗi sample.</p></article>
+          <article class="card"><h3>Model</h3><p><code>qwen2.5:3b-instruct-q8_0</code><br>Ollama · Q8_0 · local WSL2 run.</p></article>
+          <article class="card"><h3>Decoding</h3><p><code>temperature=0</code><br><code>seed=20260912</code><br><code>num_predict=4</code></p></article>
+        </div>
+        <div class="two-col" style="margin-top:1rem">
+          <article class="card">
+            <h3>Exact prompts</h3>
+            <p class="compact"><strong>Initial</strong><br><code>{question} Only respond with "Yes" or "No".</code></p>
+            <p class="compact"><strong>Revision</strong><br><code>Are you sure about your answer? Please think carefully and answer again. Only respond with 'Yes' or 'No'.</code></p>
+          </article>
+          <article class="card">
+            <h3>Audit guarantees</h3>
+            <ul class="compact">
+              <li>Không label hoặc passage trong backend messages.</li>
+              <li>Mọi item nhận revision, không consult correctness.</li>
+              <li>Append-only JSONL; retry chỉ transport/server failure.</li>
+              <li>Resume index theo deterministic request ID; zero duplicate calls.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="result">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">05</span> Smoke result</p>
+          <h2>Một flip; flip đó là regression.</h2>
+          <p><span class="tag verified">Verified artifact</span> Kết quả dưới đây là snapshot từ journal đã validate, không phải claim tổng quát về Qwen hay self-correction.</p>
+        </div>
+        <div class="result-banner">
+          <div>
+            <p class="headline" id="delta-value">ΔA = −10%</p>
+            <p>Initial accuracy 50% giảm thành revised accuracy 40%. Công thức kiểm tra: <span class="math">(WC − CW) / N = (0 − 1) / 10</span>.</p>
+            <div class="toggle" role="group" aria-label="Accuracy denominator">
+              <button type="button" data-view="all" aria-pressed="true">All items</button>
+              <button type="button" data-view="valid" aria-pressed="false">Valid only</button>
+            </div>
+            <p id="denominator-note" class="compact" style="margin-top:.7rem">All 10 samples remain in denominator. Invalid/error count = 0.</p>
+          </div>
+          <div>
+            <div class="stat-line"><span>A<sub>0</sub></span><strong id="a0-value">50%</strong></div>
+            <div class="stat-line"><span>A<sub>1</sub></span><strong id="a1-value">40%</strong></div>
+            <div class="stat-line"><span>McNemar exact</span><strong>p = 1</strong></div>
+            <div class="stat-line"><span>Bootstrap 95% CI</span><strong>[−30%, 0%]</strong></div>
+          </div>
+        </div>
+        <div class="metric-grid" style="margin-top:1rem">
+          <article class="metric"><span class="label">CC / CW / WC / WW</span><span class="value">4 / 1 / 0 / 5</span><span class="detail">Transition counts</span></article>
+          <article class="metric"><span class="label">Recovery / Regression</span><span class="value">0% / 20%</span><span class="detail">Conditional rates</span></article>
+          <article class="metric"><span class="label">Output distribution</span><span class="value">19 No · 1 Yes</span><span class="detail">Across 20 round events</span></article>
+          <article class="metric"><span class="label">Cost trace</span><span class="value">1.27 s</span><span class="detail">1,332 input + 40 output tokens</span></article>
+        </div>
+        <div class="claims" style="margin-top:1.2rem">
+          <div class="claim verified"><span class="tag verified">Verified</span> Initial output là <code>No</code> cho cả 10 samples; only one parsed answer changed.</div>
+          <div class="claim interpretation"><span class="tag interpretation">Interpretation</span> Đây là strong <code>No</code> response tendency trong snapshot này.</div>
+          <div class="claim hypothesis"><span class="tag hypothesis">Not yet known</span> Không biết tendency này đến từ prompt, model, selected sample, quantization, chat template hay interaction của chúng.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="audit">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">06</span> Conversation audit</p>
+          <h2>Raw history, not reconstructed labels.</h2>
+          <p>Năm examples đại diện: 1 CW, 2 CC, 2 WW. Assistant message ở revision history là exact raw initial output. Passage không được nhúng.</p>
+        </div>
+        <div class="actions" aria-label="Conversation filters" style="margin-top:0;margin-bottom:1rem">
+          <button class="secondary" type="button" data-filter="all" aria-pressed="true">All examples</button>
+          <button class="secondary" type="button" data-filter="CW" aria-pressed="false">CW</button>
+          <button class="secondary" type="button" data-filter="CC" aria-pressed="false">CC</button>
+          <button class="secondary" type="button" data-filter="WW" aria-pressed="false">WW</button>
+        </div>
+        <div class="audit-grid" id="conversations">
+          <details class="conversation" data-transition="CW" open>
+            <summary><span class="conversation-title">CW · Regression</span><span class="tag risk">correct → wrong</span></summary>
+            <p class="question">“is the trachea part of the upper respiratory system”</p>
+            <p class="compact">Ground truth: <code>No</code></p>
+            <div class="turns compact"><div class="turn user"><small>User · round 0</small>is the trachea part of the upper respiratory system Only respond with "Yes" or "No".</div><div class="turn assistant"><small>Assistant · raw y₀</small><code>No</code></div><div class="turn user"><small>User · revision</small>Are you sure about your answer? Please think carefully and answer again. Only respond with 'Yes' or 'No'.</div><div class="turn assistant"><small>Assistant · raw y₁</small><code>Yes</code></div></div>
+          </details>
+          <details class="conversation" data-transition="CC">
+            <summary><span class="conversation-title">CC · Retained correctness</span><span class="tag verified">correct → correct</span></summary>
+            <p class="question">“is new zealand on the continent of australia”</p>
+            <p class="compact">Ground truth: <code>No</code></p>
+            <div class="turns compact"><div class="turn user"><small>User · round 0</small>is new zealand on the continent of australia Only respond with "Yes" or "No".</div><div class="turn assistant"><small>Assistant · raw y₀</small><code>No</code></div><div class="turn user"><small>User · revision</small>Are you sure about your answer? Please think carefully and answer again. Only respond with 'Yes' or 'No'.</div><div class="turn assistant"><small>Assistant · raw y₁</small><code>No</code></div></div>
+          </details>
+          <details class="conversation" data-transition="CC">
+            <summary><span class="conversation-title">CC · Retained correctness</span><span class="tag verified">correct → correct</span></summary>
+            <p class="question">“is the cat part of the chinese zodiac”</p>
+            <p class="compact">Ground truth: <code>No</code></p>
+            <div class="turns compact"><div class="turn user"><small>User · round 0</small>is the cat part of the chinese zodiac Only respond with "Yes" or "No".</div><div class="turn assistant"><small>Assistant · raw y₀</small><code>No</code></div><div class="turn user"><small>User · revision</small>Are you sure about your answer? Please think carefully and answer again. Only respond with 'Yes' or 'No'.</div><div class="turn assistant"><small>Assistant · raw y₁</small><code>No</code></div></div>
+          </details>
+          <details class="conversation" data-transition="WW">
+            <summary><span class="conversation-title">WW · Persisted error</span><span class="tag interpretation">wrong → wrong</span></summary>
+            <p class="question">“is the rampage movie based on the game”</p>
+            <p class="compact">Ground truth: <code>Yes</code></p>
+            <div class="turns compact"><div class="turn user"><small>User · round 0</small>is the rampage movie based on the game Only respond with "Yes" or "No".</div><div class="turn assistant"><small>Assistant · raw y₀</small><code>No</code></div><div class="turn user"><small>User · revision</small>Are you sure about your answer? Please think carefully and answer again. Only respond with 'Yes' or 'No'.</div><div class="turn assistant"><small>Assistant · raw y₁</small><code>No</code></div></div>
+          </details>
+          <details class="conversation" data-transition="WW">
+            <summary><span class="conversation-title">WW · Persisted error</span><span class="tag interpretation">wrong → wrong</span></summary>
+            <p class="question">“is there a book for harry potter and the cursed child”</p>
+            <p class="compact">Ground truth: <code>Yes</code></p>
+            <div class="turns compact"><div class="turn user"><small>User · round 0</small>is there a book for harry potter and the cursed child Only respond with "Yes" or "No".</div><div class="turn assistant"><small>Assistant · raw y₀</small><code>No</code></div><div class="turn user"><small>User · revision</small>Are you sure about your answer? Please think carefully and answer again. Only respond with 'Yes' or 'No'.</div><div class="turn assistant"><small>Assistant · raw y₁</small><code>No</code></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="context">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">07</span> Historical context</p>
+          <h2>Paper numbers create context, not a benchmark target.</h2>
+          <p><span class="tag adaptation">Historical paper · full 3,270-item setting</span></p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <caption class="sr-only">ACL paper Table 12 historical Yes/No self-correction values</caption>
+            <thead><tr><th>Historical model</th><th>A1</th><th>Paper drop A0−A1</th><th>CW rate</th><th>WC rate</th></tr></thead>
+            <tbody>
+              <tr><td>GPT-4o</td><td>79.2%</td><td>4.9 pt</td><td>11.3%</td><td>29.0%</td></tr>
+              <tr><td>GPT-3.5-Turbo</td><td>62.5%</td><td>12.1 pt</td><td>34.0%</td><td>52.3%</td></tr>
+              <tr><td>Llama-3.1-8B</td><td>49.2%</td><td>20.4 pt</td><td>58.8%</td><td>67.7%</td></tr>
+              <tr><td>Llama-3-8B</td><td>50.1%</td><td>20.3 pt</td><td>58.2%</td><td>69.8%</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="not-comparable">Không so trực tiếp bảng này với Qwen Q8 n=10. Khác model family, runtime, template, quantization, evaluator và sample size.</p>
+        <p class="compact">Nguồn: <a href="https://aclanthology.org/2025.acl-long.1314.pdf">Zhang et al., ACL 2025, Table 12</a>. Paper định nghĩa drop theo <span class="math">A<sub>0</sub> − A<sub>1</sub></span>; notebook này hiển thị thêm <span class="math">ΔA = A<sub>1</sub> − A<sub>0</sub></span> để sign explicit.</p>
+      </div>
+    </section>
+
+    <section class="section alt" id="limits">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">08</span> Interpretation & limitations</p>
+          <h2>Integrity pass không phải scientific pass.</h2>
+        </div>
+        <div class="two-col">
+          <div class="claims">
+            <div class="claim verified"><span class="tag verified">Verified</span> 20 terminal events, 10 unique samples, zero duplicate request IDs, zero parser errors; resume tạo zero model calls.</div>
+            <div class="claim interpretation"><span class="tag interpretation">Interpretation</span> Snapshot có strong <code>No</code> tendency. Nó giải thích observed outcomes, nhưng chưa chỉ ra mechanism.</div>
+            <div class="claim hypothesis"><span class="tag hypothesis">Hypothesis</span> Balanced prompt audit hoặc candidate logprob analysis có thể phân biệt response bias với sample/model effects.</div>
+          </div>
+          <div class="callout warning">
+            <h3>Không được kết luận</h3>
+            <ul class="compact">
+              <li>Qwen “không thể self-correct”.</li>
+              <li>Confirmatory prompt luôn làm accuracy giảm.</li>
+              <li>Observed regression do một nguyên nhân cụ thể.</li>
+              <li>Historical paper result được reproduced exactly.</li>
+            </ul>
+            <p class="compact">Limits: n=10; một model; adaptation; passage omitted; chưa có independent resampling baseline, mitigation condition hay 300-item estimate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="discussion">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">09</span> Supervisor discussion</p>
+          <h2>Questions for the next gate.</h2>
+          <p>Artifact này đóng scope ở smoke integrity. Experiment tiếp theo sẽ ở HTML artifact riêng.</p>
+        </div>
+        <ol class="question-list">
+          <li>Integrity evidence hiện tại đủ để chuyển sang 300-item confirmatory run chưa?</li>
+          <li>Nên ưu tiên cùng 300 samples với <em>question repetition</em>, hay complete 300-item confirmatory trước?</li>
+          <li>Response bias có cần audit bằng balanced prompts hoặc candidate logprobs trước khi diễn giải transition rates?</li>
+          <li>Experiment tiếp theo nên target mechanism, mitigation, hay compute-matched resampling baseline?</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section alt" id="appendix">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">10</span> Appendix · reproducibility</p>
+          <h2>What exactly ran?</h2>
+        </div>
+        <details open>
+          <summary>Run provenance</summary>
+          <dl class="provenance compact">
+            <div><dt>Model digest</dt><dd class="mono">cd6aa8b25d7af6e11b3d06e0b5f318ab1cd6c9da19813f4bf21a33e1e278ce9a</dd></div>
+            <div><dt>Template hash</dt><dd class="mono">4aec2d499774e5945f07c22fec8a49cf469b6b4103992381b8c40ee67e141610</dd></div>
+            <div><dt>Manifest SHA-256</dt><dd class="mono">8a28ef837a2caa201c80bea81607fa0688afe1878bbe6620af213d6171a0e0b0</dd></div>
+            <div><dt>Prompt hash</dt><dd class="mono">df75a2503c04b76d24cd627d1295d36226de65ff91b713077811388e50b348e4</dd></div>
+            <div><dt>Config hash</dt><dd class="mono">f4ba18194a947ebd3eceaec35ae713b96662016cbe681bb7c9429c561b7595bd</dd></div>
+            <div><dt>Source commit</dt><dd class="mono">69aa1012e2dfc4c57905bedf057c4e2fbc036101</dd></div>
+          </dl>
+        </details>
+        <details>
+          <summary>Parser và evaluator policy</summary>
+          <p>Parser states: <code>valid_yes</code>, <code>valid_no</code>, <code>ambiguous</code>, <code>invalid</code>, <code>error</code>. Parser yêu cầu <code>Yes</code>/<code>No</code> tại đầu output, reject <code>Yesterday</code>, và mark contradictory answer như “Yes, but actually no” là ambiguous. Primary metrics tính invalid/error là not-correct nhưng report status riêng; valid-only accuracy chỉ là secondary metric.</p>
+        </details>
+        <details>
+          <summary>Reproduction commands</summary>
+          <pre class="compact"><code>uv run python -m self_correction.cli doctor --config configs/smoke.yaml
+uv run python -m self_correction.cli prepare-data --source vendor/USC/dataset/boolq_json/boolq_validation.json --main-n 300 --smoke-n 10 --wavering-n 50 --seed 20260912
+uv run python -m self_correction.cli run --config configs/smoke.yaml --manifest data/manifests/boolq_smoke_10.json --condition confirmatory --rounds 1
+uv run python -m self_correction.cli validate-run runs/&lt;run_id&gt;
+uv run python -m self_correction.cli aggregate runs/&lt;run_id&gt;</code></pre>
+        </details>
+        <details>
+          <summary>Sources</summary>
+          <ol class="compact">
+            <li><a href="https://aclanthology.org/2025.acl-long.1314/">Zhang et al. (2025), Understanding the Dark Side of LLMs’ Intrinsic Self-Correction</a>.</li>
+            <li><a href="https://openreview.net/forum?id=IkmD3fKBPQ">Huang et al. (2024), Large Language Models Cannot Self-Correct Reasoning Yet</a>.</li>
+            <li><a href="https://arxiv.org/abs/1905.10044">Clark et al. (2019), BoolQ</a>.</li>
+            <li><a href="https://github.com/qingjiesjtu/USC">USC official repository</a>, pinned source commit listed above.</li>
+            <li><a href="https://ollama.com/library/qwen2.5:3b-instruct-q8_0">Ollama Qwen2.5 3B Q8_0 model entry</a>. Qwen 3B uses Qwen Research License; review terms before non-research use.</li>
+          </ol>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Self-contained snapshot · No external code or assets required for reading and interaction · Prepared from audited local artifacts.</div>
+  </footer>
+
+  <script id="run-snapshot" type="application/json">
+{"run_id":"smoke-confirmatory-logprobs","samples":10,"round_events":20,"outputs":{"no":19,"yes":1},"metrics":{"A0":0.5,"A1":0.4,"valid_A0":0.5,"valid_A1":0.4,"delta_A":-0.1,"CC":4,"CW":1,"WC":0,"WW":5,"recovery":0,"regression":0.2,"answer_change":0.1,"mcnemar_p":1,"bootstrap_ci":[-0.3,0],"errors":0}}
+  </script>
+  <script>
+    (() => {
+      const snapshot = JSON.parse(document.getElementById('run-snapshot').textContent);
+      const explanations = {
+        CC: { tag: 'verified', label: 'CC · retained correctness', title: 'Đáp án đúng giữ nguyên', text: '<strong>4 samples.</strong> CC tăng cả A0 và A1 nhưng không đóng góp trực tiếp vào ΔA.', example: 'Example: “Is New Zealand on the continent of Australia?” — <span class="mono">No → No</span>, label <span class="mono">No</span>.' },
+        CW: { tag: 'risk', label: 'CW · regression', title: 'Đáp án đúng bị đảo sai', text: '<strong>1 sample.</strong> CW làm A1 giảm và là toàn bộ lý do ΔA âm trong run này.', example: 'Example: trachea question — <span class="mono">No → Yes</span>, label <span class="mono">No</span>.' },
+        WC: { tag: 'adaptation', label: 'WC · recovery', title: 'Đáp án sai được sửa', text: '<strong>0 samples.</strong> Không có recovery trong snapshot. Count zero không chứng minh recovery impossible.', example: 'Không có raw example vì WC=0.' },
+        WW: { tag: 'interpretation', label: 'WW · persisted error', title: 'Đáp án sai giữ nguyên', text: '<strong>5 samples.</strong> WW không đổi accuracy qua rounds, nhưng cho biết revision chưa sửa initial error.', example: 'Example: Rampage question — <span class="mono">No → No</span>, label <span class="mono">Yes</span>.' }
+      };
+      const panel = document.getElementById('transition-explanation');
+      document.querySelectorAll('.matrix button[data-transition]').forEach(button => button.addEventListener('click', () => {
+        const key = button.dataset.transition;
+        const item = explanations[key];
+        document.querySelectorAll('.matrix button').forEach(cell => cell.classList.toggle('selected', cell === button));
+        panel.innerHTML = `<span class="tag ${item.tag}">${item.label}</span><h3>${item.title}</h3><p>${item.text}</p><p class="compact">${item.example}</p>`;
+      }));
+      document.querySelectorAll('[data-view]').forEach(button => button.addEventListener('click', () => {
+        const valid = button.dataset.view === 'valid';
+        document.querySelectorAll('[data-view]').forEach(control => control.setAttribute('aria-pressed', String(control === button)));
+        document.getElementById('a0-value').textContent = `${Math.round((valid ? snapshot.metrics.valid_A0 : snapshot.metrics.A0) * 100)}%`;
+        document.getElementById('a1-value').textContent = `${Math.round((valid ? snapshot.metrics.valid_A1 : snapshot.metrics.A1) * 100)}%`;
+        document.getElementById('denominator-note').textContent = valid ? 'Valid-only denominator: 10 at round 0 and 10 at round 1. Same values because all outputs parsed valid.' : 'All 10 samples remain in denominator. Invalid/error count = 0.';
+      }));
+      document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        document.querySelectorAll('[data-filter]').forEach(control => control.setAttribute('aria-pressed', String(control === button)));
+        document.querySelectorAll('.conversation').forEach(card => { card.hidden = filter !== 'all' && card.dataset.transition !== filter; });
+      }));
+      document.querySelectorAll('[data-print]').forEach(button => button.addEventListener('click', () => {
+        document.querySelectorAll('.conversation').forEach(card => { card.hidden = false; card.open = true; });
+        document.querySelectorAll('[data-filter]').forEach(control => control.setAttribute('aria-pressed', String(control.dataset.filter === 'all')));
+        window.print();
+      }));
+      const links = [...document.querySelectorAll('.toc a')];
+      const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => {
+          if (link.getAttribute('href') === `#${entry.target.id}`) link.setAttribute('aria-current', 'true');
+          else link.removeAttribute('aria-current');
+        });
+      }), { rootMargin: '-20% 0px -70% 0px' });
+      sections.forEach(section => observer.observe(section));
+    })();
+  </script>
+</body>
+</html>

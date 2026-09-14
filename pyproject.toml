@@ -1,0 +1,20 @@
+[project]
+name = "self-correction-replication"
+version = "0.1.0"
+description = "Audited BoolQ intrinsic self-correction smoke replication"
+requires-python = ">=3.12"
+dependencies = ["pydantic>=2.10,<3", "PyYAML>=6,<7", "numpy>=2,<3", "scipy>=1.14,<2"]
+
+[dependency-groups]
+dev = ["pytest>=8,<9"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/self_correction"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

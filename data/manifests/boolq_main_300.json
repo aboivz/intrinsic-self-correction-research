@@ -1,0 +1,2410 @@
+{
+  "schema_version": "1.0.0",
+  "dataset": "BoolQ validation from USC pinned commit",
+  "source_count": 3270,
+  "selection": "label-stratified random sample without replacement",
+  "seed": 20260912,
+  "items": [
+    {
+      "source_index": 1896,
+      "sample_id": "boolq-val-001896-1455a7d1",
+      "question": "is it illegal to sell e cigs to minors",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1455a7d162adb5d3956975b993880d9ec6af4f9b60d4998f57bc825fa2d4e6a7"
+    },
+    {
+      "source_index": 308,
+      "sample_id": "boolq-val-000308-bef4e9a9",
+      "question": "are ground coriander and cumin the same thing",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "bef4e9a91ab4d864137a8c131ec5091e485126ce07aed8703a0df940b04dc3db"
+    },
+    {
+      "source_index": 3001,
+      "sample_id": "boolq-val-003001-a844fe8a",
+      "question": "does marley die in a little bit of heaven",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a844fe8af8abafd676de4cb0e7672ae1af678cfe9c2ca4c17e938db39dcaebb8"
+    },
+    {
+      "source_index": 323,
+      "sample_id": "boolq-val-000323-a41a6eb6",
+      "question": "did the pirates of the caribbean ride come first",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a41a6eb6cc658119bf1d33e10c14d415d2316df8083e42219e5a391e103e4722"
+    },
+    {
+      "source_index": 2879,
+      "sample_id": "boolq-val-002879-f09e18f0",
+      "question": "is the county court business centre a real court",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f09e18f0e76e4b5f4adc50dee7f6d547294515cf9e532dd54b4445f436291c71"
+    },
+    {
+      "source_index": 1679,
+      "sample_id": "boolq-val-001679-def2aa59",
+      "question": "can picking your nose affect your sense of smell",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "def2aa59ab440b2dce8c299cd1794ed7c3818384ccaddb5228c61c6150952191"
+    },
+    {
+      "source_index": 2401,
+      "sample_id": "boolq-val-002401-ee916bdd",
+      "question": "has any pitcher thrown a no hitter and lost",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ee916bdd60ef04b98c1100883ccbe1ccbf41983fb9fbec777bf2d103a908aaab"
+    },
+    {
+      "source_index": 779,
+      "sample_id": "boolq-val-000779-d5f47af5",
+      "question": "did spider man turn off the dark make money",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "d5f47af54c32055685e8f72e0f1e6de5a410b67c2663f509dbc4f4d945556fad"
+    },
+    {
+      "source_index": 906,
+      "sample_id": "boolq-val-000906-38a87dfb",
+      "question": "can we have more than 9 supreme court justices",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "38a87dfb6b75db6d3daffcab5fcede9a07d7e5f405eced1364545e9c6e1f09fc"
+    },
+    {
+      "source_index": 563,
+      "sample_id": "boolq-val-000563-0ac7819a",
+      "question": "is the little princess based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0ac7819a903bfc4081cbf8509e841612c1addfc10e3644ee22ad910793369e0a"
+    },
+    {
+      "source_index": 3216,
+      "sample_id": "boolq-val-003216-f2f6c736",
+      "question": "is a memory card the same as a flash drive",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f2f6c736b7e989ba02e593fd3726ce784c4846b458f2e3735efd7d42d13ef1ec"
+    },
+    {
+      "source_index": 111,
+      "sample_id": "boolq-val-000111-45ed044a",
+      "question": "can you cut the stock off a shotgun",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "45ed044a6b6fe0ab1ca7806cf6665faa5f67181e728661968c28df77a16ba211"
+    },
+    {
+      "source_index": 832,
+      "sample_id": "boolq-val-000832-4c6559a6",
+      "question": "were any bodies found from the edmund fitzgerald",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4c6559a6b3dd01eb7ac3f12bb67c18524005a801f96e74727302ce3c81f90c59"
+    },
+    {
+      "source_index": 899,
+      "sample_id": "boolq-val-000899-29c87fbc",
+      "question": "is fort walton beach the same as destin",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "29c87fbc8cc866b25994f0c2d0eb002fb38a1bfdfab358ed3c71eb19d34dc20a"
+    },
+    {
+      "source_index": 3054,
+      "sample_id": "boolq-val-003054-8806fc6e",
+      "question": "can i bring my dog to pet supplies plus",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8806fc6ea5e680d078a499683fac0f1f5c8a0ecb898664df49af1189b79718f9"
+    },
+    {
+      "source_index": 1873,
+      "sample_id": "boolq-val-001873-a26abda8",
+      "question": "is tanjore a traditional indian folk art form",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a26abda8a2cf753bd753b405a14b53e2b4c2e43fea28d9b0d2cfd10751fe2c7d"
+    },
+    {
+      "source_index": 2935,
+      "sample_id": "boolq-val-002935-8fa778fb",
+      "question": "is a grouse the same as a partridge",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8fa778fb835d6fa95a6891e62f82bb84def3a59dbaa42220deaded373100f36b"
+    },
+    {
+      "source_index": 1927,
+      "sample_id": "boolq-val-001927-ea7b3bd9",
+      "question": "is jason in the first friday the 13th",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ea7b3bd9d430be7c275ff0e262ef851ba6564d3ce1e4fe5597cd2250f7567b42"
+    },
+    {
+      "source_index": 193,
+      "sample_id": "boolq-val-000193-f7b4f785",
+      "question": "is the rampage movie based on the game",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f7b4f785e694886e95da08de2493c4677a0ebf55d282553f75cbbf194bd5a6eb"
+    },
+    {
+      "source_index": 1195,
+      "sample_id": "boolq-val-001195-04c28b04",
+      "question": "can a person have dual citizenship in india",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "04c28b04c271e34743bce9f1b5889d3d9cb3cb88ccebe7d2e49cdfb3ec0fcd0f"
+    },
+    {
+      "source_index": 2242,
+      "sample_id": "boolq-val-002242-092e91e9",
+      "question": "is it legal to smoke weed in ireland",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "092e91e90c0014a82861b0b50234828f9911c3e0aaa425e1b2447616649ed832"
+    },
+    {
+      "source_index": 2120,
+      "sample_id": "boolq-val-002120-176aefac",
+      "question": "is the film 633 squadron based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "176aefac78ce15be2e799e063f17be7d89295bf93279bfd787477f7e71ea253e"
+    },
+    {
+      "source_index": 189,
+      "sample_id": "boolq-val-000189-6185aee4",
+      "question": "do bees die if they lose their stinger",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6185aee49a4da3f8ebc1c72c9953f178086cdd1daacb324a3f25788485642f28"
+    },
+    {
+      "source_index": 868,
+      "sample_id": "boolq-val-000868-9b35bb00",
+      "question": "is the maze runner death cure the last movie",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9b35bb00ca17024e4f6a58cc7d04aec6998f56e3d98f7f3e98d26afb709bb882"
+    },
+    {
+      "source_index": 1852,
+      "sample_id": "boolq-val-001852-65c52ed1",
+      "question": "does the atomic number represent the number of protons",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "65c52ed10a38af183ad95a3c13ffbcd588f92918244f434cbbbba167287858df"
+    },
+    {
+      "source_index": 1636,
+      "sample_id": "boolq-val-001636-16d56219",
+      "question": "do corporations have the same free speech rights as persons",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "16d56219dacd762b33b0c8a26f5452308168c727c34371e24259df1ab981bb9c"
+    },
+    {
+      "source_index": 2630,
+      "sample_id": "boolq-val-002630-60f4d399",
+      "question": "are chickpeas and garbonzo beans the same thing",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "60f4d399bc1301bf0fee396ce7472a610c6b936961161e6b3233d9ca1e71e5d6"
+    },
+    {
+      "source_index": 329,
+      "sample_id": "boolq-val-000329-3d05547d",
+      "question": "is the white cover on brie cheese edible",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3d05547dee87150585d3e8956dfd09b0bc92eb7d9448bc05653143f1b46f7dcf"
+    },
+    {
+      "source_index": 2988,
+      "sample_id": "boolq-val-002988-b7ba3bd1",
+      "question": "does kentucky have a stand your ground law",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b7ba3bd1403d7d0633df45122e0cab7af743263486439cef7e6e9ec8c76c2d61"
+    },
+    {
+      "source_index": 1660,
+      "sample_id": "boolq-val-001660-3d894c96",
+      "question": "does dory find her parents in finding dory",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3d894c96a3e48ab1bbda4a574d31ff1268c7e73d4b4cc9a6eb638bf68355cd26"
+    },
+    {
+      "source_index": 2665,
+      "sample_id": "boolq-val-002665-8d1372c2",
+      "question": "is there a place called cabot cove maine",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8d1372c2487d04a58c8b0287330504e0b222819e61fbd0630916870c81d799ce"
+    },
+    {
+      "source_index": 38,
+      "sample_id": "boolq-val-000038-b282a0e5",
+      "question": "can carbon form polar covalent bonds with hydrogen",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b282a0e587587dace24896a6bd55855515534650d5fb96b5538e94922575610d"
+    },
+    {
+      "source_index": 1667,
+      "sample_id": "boolq-val-001667-37503ca6",
+      "question": "do church of england make the sign of the cross",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "37503ca633c9478b6931bf70833a3a0fb6aeb61234b93238374540d5f239b3ad"
+    },
+    {
+      "source_index": 2946,
+      "sample_id": "boolq-val-002946-7b3ed94f",
+      "question": "is everybody's all american a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "7b3ed94f79b5d7c6f8be78fc1602bfbbec911b24ebc190446760806a8b725cab"
+    },
+    {
+      "source_index": 2104,
+      "sample_id": "boolq-val-002104-0fe12918",
+      "question": "can there be an error in a perfect game",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0fe12918b2b0074daf0fb35aaf27ad87ad0dbdcb1d62260d532374e17faf395d"
+    },
+    {
+      "source_index": 290,
+      "sample_id": "boolq-val-000290-e6a6ea82",
+      "question": "is there a season 3 of indian summers",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e6a6ea825f54509a00308abe9741fd0b9877303f6e42270bf25d4f79d93314e7"
+    },
+    {
+      "source_index": 2491,
+      "sample_id": "boolq-val-002491-5b416478",
+      "question": "is the open door policy still used today",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5b416478cf6bf9297e858a0f98153faa9e47467a8dae09b51e043854f04312ac"
+    },
+    {
+      "source_index": 601,
+      "sample_id": "boolq-val-000601-40f0d9c2",
+      "question": "was there a sequel to ender's game",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "40f0d9c2e6918298c621d1b74f93af7b578d34634bdf1b31bc57fd97bccc1b66"
+    },
+    {
+      "source_index": 552,
+      "sample_id": "boolq-val-000552-1f963860",
+      "question": "are all the angles equal in a parallelogram",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1f96386058b018aad038a0f71ff6717a6c001873170e239beedc841bce7adeaf"
+    },
+    {
+      "source_index": 2238,
+      "sample_id": "boolq-val-002238-992d0e14",
+      "question": "does the speed of sound vary with changes in frequency at constant temperature",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "992d0e14ba3be0a750f210a87a91e0a9c5547f237a67b2c462c2d8524a530451"
+    },
+    {
+      "source_index": 480,
+      "sample_id": "boolq-val-000480-5c952cbd",
+      "question": "was there a 6th burrow in new york",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5c952cbd7a05aac2d9e3cc84eb44018ccfb5a2a505ac70df0b7a62713ca69db1"
+    },
+    {
+      "source_index": 2577,
+      "sample_id": "boolq-val-002577-9153097f",
+      "question": "was san luis rey de francia always a mission",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9153097f241911bf04c6a8f9bb3cda790c6f1647b9f74a3eb3a89811c6a76965"
+    },
+    {
+      "source_index": 703,
+      "sample_id": "boolq-val-000703-15bb1458",
+      "question": "did wayne gretzky ever win a stanley cup",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "15bb1458db4528e26b4873df3044e85a43e64786ea9f07d864e8a8c4d4c4d5b0"
+    },
+    {
+      "source_index": 917,
+      "sample_id": "boolq-val-000917-2e3e5c62",
+      "question": "does a meme have to have a picture",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "2e3e5c627983c5cd2dcdc039f4feeb024330e46429e57520dca733c02a8ccd5f"
+    },
+    {
+      "source_index": 1121,
+      "sample_id": "boolq-val-001121-835c248c",
+      "question": "is the cat part of the chinese zodiac",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "835c248cb822b41bb90947708bdad324c4458f8cd4ff958296484a1c5225d297"
+    },
+    {
+      "source_index": 992,
+      "sample_id": "boolq-val-000992-93aafb73",
+      "question": "is the us the only country to change time",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "93aafb737e6fd88dcb8ef07f9daeedb083537b3b7920fd896b071e5d2d001d35"
+    },
+    {
+      "source_index": 874,
+      "sample_id": "boolq-val-000874-df888c1c",
+      "question": "are there any thousand dollar bills in circulation",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "df888c1c4ce02148a0b25ddb073a64a60ccf68cdb4d574d5a4b8e92af50d2472"
+    },
+    {
+      "source_index": 1237,
+      "sample_id": "boolq-val-001237-e90eedda",
+      "question": "is the movie vertical limit a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e90eeddaf86da00304de15d1445ad0e6c84b738ea25f1c8f77550fc3b567ddae"
+    },
+    {
+      "source_index": 3220,
+      "sample_id": "boolq-val-003220-5f3d1ba4",
+      "question": "can pool water change color if you pee in it",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5f3d1ba4f27dc7b8734e50673c429bc57da87e1c20b38e79ed3a7ff3a8a264fa"
+    },
+    {
+      "source_index": 3227,
+      "sample_id": "boolq-val-003227-c9664921",
+      "question": "is the united states postal service owned by the government",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "c9664921cd2d69e9b47a46505dcaab7dbd5ede790e23dc66628a5ccf177ee7dc"
+    },
+    {
+      "source_index": 1035,
+      "sample_id": "boolq-val-001035-f9fbb797",
+      "question": "is fear the walking dead based on the comics",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f9fbb797e27369e402ac93a66bbd3f8246c6e496281377713f4b8e49db1e4982"
+    },
+    {
+      "source_index": 587,
+      "sample_id": "boolq-val-000587-78ee6c85",
+      "question": "is boost mobile and virgin mobile the same",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "78ee6c85fbc05479e6a01e2090cf88c870344ad631bc4e0e6512519b2c807c75"
+    },
+    {
+      "source_index": 373,
+      "sample_id": "boolq-val-000373-3072ec8b",
+      "question": "is san pedro laguna part of metro manila",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3072ec8b43e60dea9b147d5d3d80921d10eb19f17f5a86c72b435f4d062b937e"
+    },
+    {
+      "source_index": 1799,
+      "sample_id": "boolq-val-001799-77652111",
+      "question": "are treaties the supreme law of the land",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "776521112035458ac46cf4e3cc10c2f28162a6d60d27574aed49d4306c088607"
+    },
+    {
+      "source_index": 3058,
+      "sample_id": "boolq-val-003058-1b1c7d9b",
+      "question": "do they grow plants on the space station",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1b1c7d9bdce1006f944a076a5c8310410c7588a21a7e5c500b138e7296a6c81f"
+    },
+    {
+      "source_index": 139,
+      "sample_id": "boolq-val-000139-9affe5dc",
+      "question": "is the port mann bridge a toll bridge",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9affe5dc11a12f2b0c48e9928ce61ad311cc3b104f2c7fd01f9d56775b125738"
+    },
+    {
+      "source_index": 3259,
+      "sample_id": "boolq-val-003259-b83a290b",
+      "question": "is time warner and time warner cable the same company",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b83a290be6e5e919c56eed35308efbadb32a747f941201cf7a5e0efe2b322e4b"
+    },
+    {
+      "source_index": 1221,
+      "sample_id": "boolq-val-001221-a60aa445",
+      "question": "is the isle of man a part of great britain",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a60aa445b8f0ff081e2635a4f51247cdf36a4b44c1688c5d2ced5e4215360ea6"
+    },
+    {
+      "source_index": 2094,
+      "sample_id": "boolq-val-002094-1dd346c0",
+      "question": "does noel gallagher sing don't look back in anger",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1dd346c001cab4da4d5cbd42dce0b36a3fe3ce9cca1b17b82acc9761a6c4f27b"
+    },
+    {
+      "source_index": 1877,
+      "sample_id": "boolq-val-001877-2466337a",
+      "question": "can you play for two international football teams",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "2466337a887ac1280bb4c26a3847d43188df27decc6395096a4a6f78ab418360"
+    },
+    {
+      "source_index": 1862,
+      "sample_id": "boolq-val-001862-634538ca",
+      "question": "can you carry a gun in a bar in oklahoma",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "634538cad31746d8b164effbbd9ece68a57cd93499f38823d0c8b8d7ccca91d1"
+    },
+    {
+      "source_index": 803,
+      "sample_id": "boolq-val-000803-df76adb5",
+      "question": "is alex from 13 reasons why in nerve",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "df76adb552b6dec95d9f5b6b76e578378d6b1a3bb38d76e4df141df20dcbd0bd"
+    },
+    {
+      "source_index": 2542,
+      "sample_id": "boolq-val-002542-71c5dc07",
+      "question": "is we bought a zoo based on a real story",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "71c5dc072214d45d9d8ebc24205cdbbb945690b20b30eb35bf88fffbfc4c7b50"
+    },
+    {
+      "source_index": 1529,
+      "sample_id": "boolq-val-001529-1139684c",
+      "question": "is there such thing as unsweetened condensed milk",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1139684c0cd7496a276a3a4ccb71b84c89d3e9bd778b7eb96072bcca736ff634"
+    },
+    {
+      "source_index": 51,
+      "sample_id": "boolq-val-000051-fcefbfcb",
+      "question": "can a hammer be used as a weapon",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "fcefbfcb3cb02ccee9936c717063b74884a396f92230d54f5dba4e5202f914c3"
+    },
+    {
+      "source_index": 2804,
+      "sample_id": "boolq-val-002804-5ca8e1b6",
+      "question": "do i need to fast for an acth test",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5ca8e1b680df2addeb62d0f4a3c942c6876858a0e0ee2e0d8cbd2c5df5b920ac"
+    },
+    {
+      "source_index": 538,
+      "sample_id": "boolq-val-000538-09b8b82d",
+      "question": "does the host of americas got talent get a golden buzzer",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "09b8b82da052016a17c3fb6708a3009ed59ade07eb5021c982be18af9ec14018"
+    },
+    {
+      "source_index": 547,
+      "sample_id": "boolq-val-000547-317a2e3d",
+      "question": "is the terminal based on a real story",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "317a2e3d08bef68622e131d57330a7d992a8054bd8502073fd2e593555538417"
+    },
+    {
+      "source_index": 1784,
+      "sample_id": "boolq-val-001784-9fa88872",
+      "question": "is there a sequal to avengers infinity war",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9fa88872e09758ec6431603549c08b4f4b89b2568e0283a99098b65d1d3524e7"
+    },
+    {
+      "source_index": 3160,
+      "sample_id": "boolq-val-003160-25d9e14f",
+      "question": "is there a monthly fee for google voice",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "25d9e14f7dd4add5e111beb1f0f4dcdacb26253060fe0e6ecd8d0f095f774731"
+    },
+    {
+      "source_index": 3164,
+      "sample_id": "boolq-val-003164-b550a231",
+      "question": "do you have to be born in us to become president",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b550a2317e182f827033d37d7ecaf559a915dd84a03b71acc1ec63a25f1e3e23"
+    },
+    {
+      "source_index": 892,
+      "sample_id": "boolq-val-000892-b3b81574",
+      "question": "did lagos used to be the capital of nigeria",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b3b8157439a0a291a1fa1d7558b49cd6507592151b4a97667f2074e277f8f7e3"
+    },
+    {
+      "source_index": 1106,
+      "sample_id": "boolq-val-001106-304b09eb",
+      "question": "does hi-c orange have caffeine in it",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "304b09eb5ee37075552be744282c6153cb8b9823a006ad4bf354b1531a37427e"
+    },
+    {
+      "source_index": 3017,
+      "sample_id": "boolq-val-003017-fbfd7f7c",
+      "question": "is mickey and minnie's house still in magic kingdom",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "fbfd7f7cdca3bebd99c04464faeb81197bd22d434173297891fa8dd5db4eddc4"
+    },
+    {
+      "source_index": 694,
+      "sample_id": "boolq-val-000694-8a10212b",
+      "question": "was she like the wind in dirty dancing",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8a10212bd5b6386eef6ee096f98f00ce3a2e15b932f5d901d3bf191e493ea63c"
+    },
+    {
+      "source_index": 1089,
+      "sample_id": "boolq-val-001089-1000300f",
+      "question": "is social studies and geography the same thing",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1000300f0a8c39f4b0ae38ca41eedc8637dbc205565abc311a7b4e39f6163951"
+    },
+    {
+      "source_index": 2233,
+      "sample_id": "boolq-val-002233-fa61cfe5",
+      "question": "is pokemon lets go eevee a spin off",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "fa61cfe5fcbb0a67707d27ca3c8185e0d51413bc7f787c181a710940877cd2cb"
+    },
+    {
+      "source_index": 1933,
+      "sample_id": "boolq-val-001933-5ab57a80",
+      "question": "did west virginia used to be part of virginia",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5ab57a808bd8aa3fe21cd674247e4f8927ef0a1492befd1f4f0d328e1a06d127"
+    },
+    {
+      "source_index": 54,
+      "sample_id": "boolq-val-000054-f3c2c806",
+      "question": "has wisconsin ever been in the little league world series",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f3c2c806e27d80c1a8299e4b4925724c04e6b615e9aeb774d10e6d889071e32a"
+    },
+    {
+      "source_index": 1152,
+      "sample_id": "boolq-val-001152-6865dcd7",
+      "question": "is melaleuca and tea tree the same thing",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6865dcd7283412845c050ac30c615e9c5648138ace859d6b166646695e7e6477"
+    },
+    {
+      "source_index": 2768,
+      "sample_id": "boolq-val-002768-5acaa4f3",
+      "question": "can you take a picture of anyone in public uk",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5acaa4f3516ac4cefea83c572d2913763733a62cb72be27a7f9765304a4bf2f4"
+    },
+    {
+      "source_index": 1267,
+      "sample_id": "boolq-val-001267-66b6ae9b",
+      "question": "is ellis island connected to the statue of liberty",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "66b6ae9b7e6541e22371a382d2030a8d2149463b281cd0b9ba7abeacb6044ef7"
+    },
+    {
+      "source_index": 2358,
+      "sample_id": "boolq-val-002358-8db6a5dc",
+      "question": "is the ranch filmed in front of a live audience",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8db6a5dc6ea2d2275be8d0dfdfb55d5e878198577f76758cbe968c6b41b17e6b"
+    },
+    {
+      "source_index": 2333,
+      "sample_id": "boolq-val-002333-719db047",
+      "question": "is the book of jasher in the bible",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "719db0476536d3a42cdf2e9d966ee35e8bf0427063f1610be1059600b29cddbf"
+    },
+    {
+      "source_index": 2499,
+      "sample_id": "boolq-val-002499-5d8373da",
+      "question": "does the fibula form part of the knee joint",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5d8373da3fc6afee76b9cd6d3c2a056dbed1f224c359a97a05b1426dc1725241"
+    },
+    {
+      "source_index": 2861,
+      "sample_id": "boolq-val-002861-6444c13b",
+      "question": "do all eye doctors use the same eye chart",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6444c13b1ea60904bdc63de707edd4254022ad37eb1b931ad388caa7572741a3"
+    },
+    {
+      "source_index": 2554,
+      "sample_id": "boolq-val-002554-afe4b411",
+      "question": "is lymphoma the same as lymph node cancer",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "afe4b4114ffa5451454f49e46b0c94f5fdc916c3e49a6be12834f98a1c08e79d"
+    },
+    {
+      "source_index": 2663,
+      "sample_id": "boolq-val-002663-74f63d09",
+      "question": "is blood type o positive a universal donor",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "74f63d0938496753fbf6c8f6d2242edb41c00aac904c10cc927c6e4a60948b1e"
+    },
+    {
+      "source_index": 1368,
+      "sample_id": "boolq-val-001368-dd584b1f",
+      "question": "did greg oden win a championship with miami",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "dd584b1ffcfa0322125842567bf0015e78cf53628536b6ff761b512d4811f962"
+    },
+    {
+      "source_index": 1263,
+      "sample_id": "boolq-val-001263-61ce869d",
+      "question": "is saigon now called ho chi minh city",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "61ce869dbc56b8a3903575dac185eb5c4e83c00889fa25b0a22535ad02bfff38"
+    },
+    {
+      "source_index": 55,
+      "sample_id": "boolq-val-000055-755cd192",
+      "question": "does damon and elena get together in season 3",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "755cd192ecaf3e49c0f5becf69a567824f9c6bb6857f9d9a9ebc72d89d6981ba"
+    },
+    {
+      "source_index": 536,
+      "sample_id": "boolq-val-000536-c23a823a",
+      "question": "can you get a caution without being arrested",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "c23a823abcd82607ecf322243f5a6f27d0d247b3f767feac17f59a4cacfba6d1"
+    },
+    {
+      "source_index": 1092,
+      "sample_id": "boolq-val-001092-914153a0",
+      "question": "is new york in the new england region",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "914153a0135ee36f9517cb36f4796dea6dd90ee4c4d23a8f693d1a5494fd5312"
+    },
+    {
+      "source_index": 2803,
+      "sample_id": "boolq-val-002803-25596edd",
+      "question": "are a meter and a yard the same length",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "25596edd4e881df35b12479931011a022fb7d8b38f3010755705f00ef3166157"
+    },
+    {
+      "source_index": 2272,
+      "sample_id": "boolq-val-002272-5970fb81",
+      "question": "is there a third clash of the titans",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5970fb8161ed16958ce7cc0868e4b31b45bcf2b82e57b9e24780c419219f03b6"
+    },
+    {
+      "source_index": 1734,
+      "sample_id": "boolq-val-001734-b397f38a",
+      "question": "does nevada have a stand your ground law",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b397f38a1ba1f0409337a6f3d7198f98e124383dea921e2cdc3bd9c3761ae40c"
+    },
+    {
+      "source_index": 1327,
+      "sample_id": "boolq-val-001327-b9c7394a",
+      "question": "will there be another season of the affiar",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b9c7394ad68afd8d8795c9bd4b5746e78ccb3609bdd8b50a17324ff011496100"
+    },
+    {
+      "source_index": 1749,
+      "sample_id": "boolq-val-001749-70450a10",
+      "question": "are fighting words protected under freedom of speech",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "70450a102767035be25484f596733ae0e4203a0b4b92a9e633ebdb3e9b4efa34"
+    },
+    {
+      "source_index": 2865,
+      "sample_id": "boolq-val-002865-e3082f4b",
+      "question": "is 866 a toll free number in canada",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e3082f4bd914b7d0dc5b9458b859c4eff355c3594a11f9f57f4fb137f1357b7d"
+    },
+    {
+      "source_index": 1438,
+      "sample_id": "boolq-val-001438-752e97b3",
+      "question": "is a groundhog and a mole the same thing",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "752e97b3d990a97f374cd0355df3580255a56a6339152f91bc266357584a5ecd"
+    },
+    {
+      "source_index": 520,
+      "sample_id": "boolq-val-000520-ea71dd5b",
+      "question": "is it true that kangaroo means i don't know",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ea71dd5ba34aeef8b3f1ea1faf0211b2fbf10a4e884397c00a152490a3523ff7"
+    },
+    {
+      "source_index": 2301,
+      "sample_id": "boolq-val-002301-6eecf46d",
+      "question": "do both male and female rhinos have horns",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6eecf46d9ce07d0844991eb13f687be307843cf94e0cf6babc432b2265bc8033"
+    },
+    {
+      "source_index": 107,
+      "sample_id": "boolq-val-000107-4400d7f1",
+      "question": "will there be a new spartacus season 5",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4400d7f1739a7721123b2cbb01f931fb045702a84d39adbd47198a27f2b33a45"
+    },
+    {
+      "source_index": 2595,
+      "sample_id": "boolq-val-002595-62067c7b",
+      "question": "is there a new season of once upon a time",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "62067c7b98a1ccab37691cbc1ec64d68ca00a7c16bd4a853fda8275591d37101"
+    },
+    {
+      "source_index": 1445,
+      "sample_id": "boolq-val-001445-4556dab2",
+      "question": "are the church of england and the anglican church the same",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4556dab200ac006429d7ebfcc4b9845d44e95a72ce0a98040f6e281b7d7d8bcd"
+    },
+    {
+      "source_index": 3150,
+      "sample_id": "boolq-val-003150-e91fb878",
+      "question": "do cows have to keep getting pregnant to produce milk",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e91fb878ee7db7a8463fda1b6e83b5b985c5c0299cdee3a97d2dde1bd53c8ae6"
+    },
+    {
+      "source_index": 1777,
+      "sample_id": "boolq-val-001777-07199107",
+      "question": "is season 5 agents of shield the last season",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0719910783314eb417ebcc68075c357f4ce402317b529ce7fb6b09e99b208d77"
+    },
+    {
+      "source_index": 2179,
+      "sample_id": "boolq-val-002179-c2b2b366",
+      "question": "was america the first country to have a president",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "c2b2b36641e329a20ab4dc6b2c55794d621a163fc3c788a2f4be9ad193daf597"
+    },
+    {
+      "source_index": 1783,
+      "sample_id": "boolq-val-001783-cdae19ad",
+      "question": "is cape canaveral the same as the kennedy space center",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "cdae19ad35eb6b9adf41df21982882a0223229cd2b9f5a6965d6787488e101b4"
+    },
+    {
+      "source_index": 1587,
+      "sample_id": "boolq-val-001587-26f79b51",
+      "question": "is lake george a man-made lake",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "26f79b512825d2a4b4020e75122263283d7f3c6d5fdb71d42c3ffb64fff80f6f"
+    },
+    {
+      "source_index": 1617,
+      "sample_id": "boolq-val-001617-5f45ad2f",
+      "question": "was designated survivor filmed in the white house",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5f45ad2f7dc5ff0f7759f6b213c8a96d33f7d93f9417edd091b15db4d120d248"
+    },
+    {
+      "source_index": 948,
+      "sample_id": "boolq-val-000948-4e3ffe77",
+      "question": "is shameless coming out with a season 8",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4e3ffe77550c921d66b2324c44af780405ed6a923929fdbf3800921c5a7d8478"
+    },
+    {
+      "source_index": 651,
+      "sample_id": "boolq-val-000651-24e82604",
+      "question": "is the square root of 3 a rational number",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "24e82604d90e2e45f30799ec972441fb3ca12a4471a6f9a2f1b08d1c6cf9f81e"
+    },
+    {
+      "source_index": 447,
+      "sample_id": "boolq-val-000447-3f537f74",
+      "question": "is jefferson airplane in the rock and roll hall of fame",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3f537f74956761c8ee8877445962ae37526a2750b473d7d18c9666de49055742"
+    },
+    {
+      "source_index": 1818,
+      "sample_id": "boolq-val-001818-ef77efb6",
+      "question": "is the czech republic and czechoslovakia the same thing",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ef77efb61917a3f32b41a6ef86f143954d2e1d1683c119b4e903f5e61479f826"
+    },
+    {
+      "source_index": 1514,
+      "sample_id": "boolq-val-001514-ec48e05e",
+      "question": "is there a law that says we have to pay taxes",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ec48e05ebdae5b8e63ad820ecb7efbfbfede63cb1e19e65d04c78100b7055242"
+    },
+    {
+      "source_index": 2014,
+      "sample_id": "boolq-val-002014-08dccfa1",
+      "question": "does seaworld san diego still have killer whales",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "08dccfa116d7625eec3cd5af9491e108a52b6309e33fa07a78481968008741f5"
+    },
+    {
+      "source_index": 2264,
+      "sample_id": "boolq-val-002264-e7b7aa6a",
+      "question": "is g major and e minor the same",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e7b7aa6a86ffe6e9d2c8ecdb4fff89b00e8cba976a57c0cc07c5e22e98ab5b93"
+    },
+    {
+      "source_index": 1081,
+      "sample_id": "boolq-val-001081-9cf04f4e",
+      "question": "is there going to be a season 2 of little witch academia",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9cf04f4ea75d7dfc369d8c58d5845458ed14b49c035a2ebcc40860717b9c2175"
+    },
+    {
+      "source_index": 654,
+      "sample_id": "boolq-val-000654-2bd7b5ae",
+      "question": "can a hiatal hernia cause an irregular heartbeat",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "2bd7b5ae5e935fb6ef50c291942d442a203b73cf382eb6f43d39870921ceebc8"
+    },
+    {
+      "source_index": 1556,
+      "sample_id": "boolq-val-001556-d427c269",
+      "question": "does new york state have the death penalty",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "d427c2693013c05e10640222b82f8ae9182efa68f62871ae04e07bcebac8c339"
+    },
+    {
+      "source_index": 1292,
+      "sample_id": "boolq-val-001292-b7e18f46",
+      "question": "was the battle of the alamo part of the mexican american war",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b7e18f46cf67a4bf2f82e3b30b5e2fb00e5e4a78b99e9106e385e90d71833ca9"
+    },
+    {
+      "source_index": 2348,
+      "sample_id": "boolq-val-002348-a4532965",
+      "question": "is there a run rule in ncaa softball",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a4532965f226c7c88b1dd41c1a4b9da02466dc2e3d662e59ad60d78ec84dcbeb"
+    },
+    {
+      "source_index": 997,
+      "sample_id": "boolq-val-000997-dbe38a44",
+      "question": "is california state route 73 a toll road",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "dbe38a44c03349e1ff5e57d4676261065f591efb1a520c99b6ae924d0d709505"
+    },
+    {
+      "source_index": 1522,
+      "sample_id": "boolq-val-001522-8193eaf0",
+      "question": "is soy sauce and worcestershire sauce the same thing",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8193eaf0e75ce0f971803d94078d9aa037ca587b053d609c00e5e4bea01a5770"
+    },
+    {
+      "source_index": 1683,
+      "sample_id": "boolq-val-001683-3f1a7fbd",
+      "question": "does george w bush still own the texas rangers",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3f1a7fbdb01f19b084e2104228c86eb387bbf16dc48dec48d14fd813b1c48d41"
+    },
+    {
+      "source_index": 509,
+      "sample_id": "boolq-val-000509-728e9344",
+      "question": "did ireland ever win the soccer world cup",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "728e93441e755e6e3f1bc8699d9a03362ca885fb993d57c24c755a2ece360ba5"
+    },
+    {
+      "source_index": 854,
+      "sample_id": "boolq-val-000854-869ba416",
+      "question": "do flight paths go over the north pole",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "869ba4164d9cd1e613846c6f81e120e59e0370e70ff5c00eb5d2ba06a39b93dd"
+    },
+    {
+      "source_index": 686,
+      "sample_id": "boolq-val-000686-dcfb1531",
+      "question": "will there be episode 9 of sacred games",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "dcfb15316d79fffd058cccd6da6ef510e704bf40a74f6696cb4eccee106ca21f"
+    },
+    {
+      "source_index": 2075,
+      "sample_id": "boolq-val-002075-fc197723",
+      "question": "is high maltose corn syrup the same as high fructose",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "fc197723a942d9659ee2014a6f3651ba2323dd7f197f1fef4915f164a0ff8f6f"
+    },
+    {
+      "source_index": 2328,
+      "sample_id": "boolq-val-002328-fcefcd62",
+      "question": "is the movie gone baby gone a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "fcefcd62328ecd4fab3017e6b4237d95fa4c355caee9c24d9c6492ba424639b7"
+    },
+    {
+      "source_index": 2841,
+      "sample_id": "boolq-val-002841-dd5cc159",
+      "question": "is there a full version of birthday cake by rihanna",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "dd5cc159927aa0e07d2af6b45c3858a6f66bacaf8cf1698c9c3ea09b88240767"
+    },
+    {
+      "source_index": 1880,
+      "sample_id": "boolq-val-001880-0267e2fd",
+      "question": "do you have to pass the bar to be an attorney",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0267e2fd88a0d480a94049582a06944ba9567958aeed9975d46534fb7ffe9cef"
+    },
+    {
+      "source_index": 2260,
+      "sample_id": "boolq-val-002260-fee3d19a",
+      "question": "did i am they get a new singer",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "fee3d19a85f31bf54ef12377f74a9da229220e70a0f6f8e33398796a6bacb274"
+    },
+    {
+      "source_index": 2847,
+      "sample_id": "boolq-val-002847-58f8298d",
+      "question": "did dwyane wade make the playoffs his rookie year",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "58f8298d96a8697cc47e72a30bd54c832c51488a5bcb60c73573838c5d036656"
+    },
+    {
+      "source_index": 606,
+      "sample_id": "boolq-val-000606-ac93c28e",
+      "question": "is there such a thing as cold fire",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ac93c28e977ef44fa179fe8d619c7259de140d6fdd5fd0ff5614d31dba27424b"
+    },
+    {
+      "source_index": 3162,
+      "sample_id": "boolq-val-003162-edc29b69",
+      "question": "has there ever been a perfect tennis match",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "edc29b69038fcbf333fbe8e9e1612100618d2c38e4c3c93921bf135723e24f08"
+    },
+    {
+      "source_index": 2280,
+      "sample_id": "boolq-val-002280-8203ffec",
+      "question": "are clary and jace really brother and sister",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8203ffec531804c1308e2787c38c7b4a2d70ed507a12f982a58985209ad579f2"
+    },
+    {
+      "source_index": 641,
+      "sample_id": "boolq-val-000641-41c812ae",
+      "question": "will there be a season six of breaking bad",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "41c812ae723525be17d6cb350ec7da5626330a17e97a68d244177e9a92e7d7dc"
+    },
+    {
+      "source_index": 2383,
+      "sample_id": "boolq-val-002383-4363e904",
+      "question": "do elizabeth and jack sparrow end up together",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4363e9045da903103e1c801233977998542e8e85416af2179b52bbb969ff2255"
+    },
+    {
+      "source_index": 2617,
+      "sample_id": "boolq-val-002617-81f2560d",
+      "question": "has anyone ever won a million on who wants to be a millionaire",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "81f2560df022e94fce468034838b1faaa9949f2890e7fe1c198384d0b0ed3a5f"
+    },
+    {
+      "source_index": 870,
+      "sample_id": "boolq-val-000870-9ff46a80",
+      "question": "is english the most commonly spoken language in the world",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9ff46a80b30f280fac7daba6ee5974970a7107c537b4b4467ad7a80ff84ae3ce"
+    },
+    {
+      "source_index": 2041,
+      "sample_id": "boolq-val-002041-88273f2a",
+      "question": "are all public companies listed on the stock exchange",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "88273f2a2052ec77fad295ffec4723882d5bb350bd72fd58f1177940ff357fa0"
+    },
+    {
+      "source_index": 123,
+      "sample_id": "boolq-val-000123-dfae418c",
+      "question": "is health care free in the united states",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "dfae418c6323f0a1325a502b9e6f864c7c284e2e75d7314bb1564364f5df91a4"
+    },
+    {
+      "source_index": 127,
+      "sample_id": "boolq-val-000127-9d9c747a",
+      "question": "did ireland qualify for the 2018 world cup",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9d9c747a718999dd7eb052478bfa74b2688d1c1d71c146e76b5fda29d6951b95"
+    },
+    {
+      "source_index": 1184,
+      "sample_id": "boolq-val-001184-e7f6aa41",
+      "question": "is there an air force base in anchorage alaska",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e7f6aa4132ec14dc059c8897e4a47f280f4336d04a32c2341ec7a86ccad783f2"
+    },
+    {
+      "source_index": 1843,
+      "sample_id": "boolq-val-001843-e181d92e",
+      "question": "do you need a license to ride a mini bike",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e181d92e15b9c58b4d6a281b263a8354b9969b57976b3feb53480de3a6d517be"
+    },
+    {
+      "source_index": 1570,
+      "sample_id": "boolq-val-001570-ba0dccab",
+      "question": "was the iphone the first touch screen phone",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ba0dccab23b1a8c0ea83d6a558972246f32b80d4844fd3772a95a89ca5a5a74a"
+    },
+    {
+      "source_index": 251,
+      "sample_id": "boolq-val-000251-54700285",
+      "question": "was the lizzie mcguire movie filmed in rome",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "54700285e0243ab19a5a8b47458f961fe6cc86ac6e928a73a4b8739d9248deae"
+    },
+    {
+      "source_index": 2477,
+      "sample_id": "boolq-val-002477-ac8a6484",
+      "question": "did all of the lava flows associated with mauna loa originate at the top of the volcano",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ac8a648422f57b41efc15177d046dd277115b7b476242fe789f69828018d70eb"
+    },
+    {
+      "source_index": 2608,
+      "sample_id": "boolq-val-002608-c13a72a6",
+      "question": "are xmen in the same universe as avengers",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "c13a72a6a2676a7889ee44f34a9d738869e421745c30564935e04f9ccc2f3d1c"
+    },
+    {
+      "source_index": 2727,
+      "sample_id": "boolq-val-002727-9867f6d9",
+      "question": "does the carrie diaries have a season 3",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9867f6d9c9aefb6b6154c07f15c43e112931fe5551f80e60665e4f98b93eb50c"
+    },
+    {
+      "source_index": 888,
+      "sample_id": "boolq-val-000888-9d08946e",
+      "question": "is percy jackson in the blood of olympus",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9d08946e62237017fe1b23f23e65c7f32fe4b9550eceb10d50ea1522526201d5"
+    },
+    {
+      "source_index": 1036,
+      "sample_id": "boolq-val-001036-408b8fbd",
+      "question": "is the jaws ride at universal orlando closed",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "408b8fbd4c18b89d2db42555dae8f3c4dfd1b2254beed283730579e06ba2af0c"
+    },
+    {
+      "source_index": 367,
+      "sample_id": "boolq-val-000367-46741f8d",
+      "question": "was the color purple based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "46741f8d6867d1f34478d6d6ee5a79fa828124511941cd1e4bdf6713fc67d655"
+    },
+    {
+      "source_index": 1470,
+      "sample_id": "boolq-val-001470-f3747681",
+      "question": "can a player be offsides on a throw in",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f374768129d2a8ab0ee8243c2ce1b314b651aa1d730d5b02e9330c1774ea3b7e"
+    },
+    {
+      "source_index": 171,
+      "sample_id": "boolq-val-000171-e5c7281b",
+      "question": "is new zealand on the continent of australia",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e5c7281b89d600b0e6ece103f925dc4b9cd24175e828125fbe6c30a720cbea3e"
+    },
+    {
+      "source_index": 346,
+      "sample_id": "boolq-val-000346-54dec896",
+      "question": "is women's college world series double elimination",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "54dec8967d763ef8b18f632706fb026a1e24b8d680a8d185372e9ffa3d8648e0"
+    },
+    {
+      "source_index": 639,
+      "sample_id": "boolq-val-000639-772a1dea",
+      "question": "do world cup players have to play for their home country",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "772a1dea697bd8f12e18b22edb54bafb501138c8d1ec14bb53b742695973a891"
+    },
+    {
+      "source_index": 2738,
+      "sample_id": "boolq-val-002738-72896f17",
+      "question": "can a state constitution override the us constitution",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "72896f1719cb9b4bcc0054a56b2a99a5162fbd8456f7a8f836484ba876d6a881"
+    },
+    {
+      "source_index": 1078,
+      "sample_id": "boolq-val-001078-e44131d0",
+      "question": "does christina yang die in season 10 episode 24",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e44131d0adb51a07bf35346a448d68da211b5d5874eed80b402b46f866d0386a"
+    },
+    {
+      "source_index": 49,
+      "sample_id": "boolq-val-000049-acf4479b",
+      "question": "is the us womens soccer team in the world cup",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "acf4479b7da8df9e9d9fb9f57173fa11d91e911713ba4ca8f809c59ee21027b4"
+    },
+    {
+      "source_index": 284,
+      "sample_id": "boolq-val-000284-0763b561",
+      "question": "do donna and eric end up getting married",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0763b5619efe5ca7e030defcbfc2b92801b0ddbf7f3a73276255c120fc1fc80c"
+    },
+    {
+      "source_index": 2019,
+      "sample_id": "boolq-val-002019-b95c79d9",
+      "question": "has a female director ever won an oscar",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b95c79d9335d68763d8e626d0e7ac44ae8c183826cfe4ef10e35d2317ee42451"
+    },
+    {
+      "source_index": 2948,
+      "sample_id": "boolq-val-002948-53515df5",
+      "question": "is jurassic world the sequel to jurassic park",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "53515df504fa7f3a65320308d0fcfe8d90918349a55e5c91f14577548b2e9989"
+    },
+    {
+      "source_index": 2234,
+      "sample_id": "boolq-val-002234-77d3170d",
+      "question": "is displacement current like conduction current a source of magnetic field",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "77d3170d89bdcf96988b846486173d012ba88cf6ac12a47ec5c5e058bfe7083a"
+    },
+    {
+      "source_index": 1638,
+      "sample_id": "boolq-val-001638-2955cc7b",
+      "question": "is a recorder the same as a tin whistle",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "2955cc7b84053d9714bae21b97a7d9e5b1e1f5a660dd2726615f48141aec276b"
+    },
+    {
+      "source_index": 2968,
+      "sample_id": "boolq-val-002968-327efd7d",
+      "question": "can you drink alcohol at 16 in australia",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "327efd7d28e5e2816a2e99c5458570ae3bb502cb3a257874d415f2564720794c"
+    },
+    {
+      "source_index": 455,
+      "sample_id": "boolq-val-000455-f12c023c",
+      "question": "is a pickle and a gherkin the same thing",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f12c023c270b2d65932a68a62fc313aff7ae316fb64ac5cd6a3d60bdb4d7d298"
+    },
+    {
+      "source_index": 2943,
+      "sample_id": "boolq-val-002943-6874017d",
+      "question": "are peppers and tomatoes in the same family",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6874017df6bfd5386e806a679270ee6ec2d8d0afbb868cc6c8d60f2c7ce51e9f"
+    },
+    {
+      "source_index": 815,
+      "sample_id": "boolq-val-000815-89f73295",
+      "question": "are the spinal cord and vertebral column the same length",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "89f7329532abdd021746a34ce93218950689b03c4ce768bc475c3babf74a5c0a"
+    },
+    {
+      "source_index": 2300,
+      "sample_id": "boolq-val-002300-20f43569",
+      "question": "can the time value of an option be negative",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "20f43569c228975b319cc58d367fa12cf7e6cf88dafcc175be7748e6781f2022"
+    },
+    {
+      "source_index": 1899,
+      "sample_id": "boolq-val-001899-4c7e5f4b",
+      "question": "is the london marathon the largest in the world",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4c7e5f4b8927db3af4548dd806d576d3d95da3301cc76e6797ba3cc1dd6272cc"
+    },
+    {
+      "source_index": 3208,
+      "sample_id": "boolq-val-003208-b80a4b71",
+      "question": "are you in the navy if you go to the naval academy",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b80a4b71a3b0ec0f820b2ef8311a2dcf8170e340df52b2c1ba218299488d663c"
+    },
+    {
+      "source_index": 1613,
+      "sample_id": "boolq-val-001613-5decc40e",
+      "question": "will there be season 9 of desperate housewives",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5decc40e6ae0861b72f8f909b4232cc69b4fcf6b66f3e1de137eabd63655ea7e"
+    },
+    {
+      "source_index": 152,
+      "sample_id": "boolq-val-000152-ecb90c5e",
+      "question": "is there a movie the handmaid's tale",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ecb90c5ec867c776972ec700632a2ba025a7f43a509c1f0133d19835e6948be3"
+    },
+    {
+      "source_index": 964,
+      "sample_id": "boolq-val-000964-02d780af",
+      "question": "is bicuspid and mitral valve the same thing",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "02d780af8e53a5d15fe374385b092e77f1b9d1789b6524699c5eeb382839cd79"
+    },
+    {
+      "source_index": 1630,
+      "sample_id": "boolq-val-001630-5b87b83a",
+      "question": "are blade runner and blade runner 2049 connected",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5b87b83aa61b3e8036c3101276b0a4c391ad2282e9c73a8b832b94d33486a3ab"
+    },
+    {
+      "source_index": 2005,
+      "sample_id": "boolq-val-002005-1f577b36",
+      "question": "can a person be born with one testicle",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1f577b36b4dd20463eb3b6805ae3564e2577f0f941f732b8cb3407939ad45977"
+    },
+    {
+      "source_index": 2520,
+      "sample_id": "boolq-val-002520-06f553e9",
+      "question": "does the t distribution have a standard deviation of 1",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "06f553e97aaa76cf788315f36d24ef445038ed479499d57e6f7c01dbc1a483b2"
+    },
+    {
+      "source_index": 115,
+      "sample_id": "boolq-val-000115-db0c5872",
+      "question": "is a father in law considered a relative",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "db0c5872bf1b6f00e576af6de74e035dca59340731817a0f01c1c0a876288e65"
+    },
+    {
+      "source_index": 2438,
+      "sample_id": "boolq-val-002438-a1cebba6",
+      "question": "are pork n beans the same as baked beans",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a1cebba60b9cbac3cc80907a39ebfb53829c5ae67c206365e95bbe4ccedbbff0"
+    },
+    {
+      "source_index": 89,
+      "sample_id": "boolq-val-000089-e11ae143",
+      "question": "is the jaguar s type rear wheel drive",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e11ae143efdd4a2cee0df55c30a3caad75be1f7cc227c93ddf3dfba763eb9800"
+    },
+    {
+      "source_index": 620,
+      "sample_id": "boolq-val-000620-300f059b",
+      "question": "does it cost money to get cash back",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "300f059b6cc68e24b0dabd721f3d2066f045a43166d651ce9628977690759f49"
+    },
+    {
+      "source_index": 108,
+      "sample_id": "boolq-val-000108-4ecd7fe0",
+      "question": "is scar alive in the lion king 2",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4ecd7fe0b05695bfb9910b44ebf8e13dd9cfcd921e0b153f61f2ed8d57dfb528"
+    },
+    {
+      "source_index": 2895,
+      "sample_id": "boolq-val-002895-abc64088",
+      "question": "did elton john ever play with t rex",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "abc6408888bb823b5f8e0fea8959f6e63a90d38a6ac864a7fd0df5ccf0cc898a"
+    },
+    {
+      "source_index": 1560,
+      "sample_id": "boolq-val-001560-bb513655",
+      "question": "can you carry a firearm in your car in texas",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "bb513655d0a89027a8a9994c7d8202a39d2e81c55ba00ead64edfaca9cae56c9"
+    },
+    {
+      "source_index": 69,
+      "sample_id": "boolq-val-000069-02ae35cd",
+      "question": "are t rex and tyrannosaurus rex the same",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "02ae35cd31bff7f73f7ff33d60b94a091301e72f054f34588aba1f3945b3021b"
+    },
+    {
+      "source_index": 1806,
+      "sample_id": "boolq-val-001806-bc02e8c8",
+      "question": "is 8.5 x 11 the same as a4",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "bc02e8c84fd58790d5c050c33d9540a45f8442ac8dbefe36ed13eef9c403b2a8"
+    },
+    {
+      "source_index": 2593,
+      "sample_id": "boolq-val-002593-8ed8ae00",
+      "question": "can a soft material scratch a hard material",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8ed8ae0097e3c18db686606891a7599e228135cf26d33eb5d9652b37fac6fbac"
+    },
+    {
+      "source_index": 726,
+      "sample_id": "boolq-val-000726-ea19ea74",
+      "question": "will there be a season 4 of the flash",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ea19ea74c61e87fb6cc5931abdf52b9846825f190286ef7c74b9adaaa5027ca0"
+    },
+    {
+      "source_index": 978,
+      "sample_id": "boolq-val-000978-74bbdd2f",
+      "question": "is 5 glucose the same as 5 dextrose",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "74bbdd2f2960c9653beead7c1bc981975fb60fa978d700b833320809eaab8964"
+    },
+    {
+      "source_index": 2166,
+      "sample_id": "boolq-val-002166-f802eb97",
+      "question": "have the lakers ever had a 3 peat",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f802eb977e15112581512d0c4ce0414f35c9f006ac1d87e0df4bf7a0c03bd847"
+    },
+    {
+      "source_index": 1463,
+      "sample_id": "boolq-val-001463-44a13689",
+      "question": "is a sweet potato part of the potato family",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "44a136898a5e82827fe0ddcd9273ba5ea37a7067a37e6138deb1663c88bdb30c"
+    },
+    {
+      "source_index": 660,
+      "sample_id": "boolq-val-000660-7d1d5291",
+      "question": "is the ksi vs logan paul fight pay per view",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "7d1d5291154efd43284737e8237d52b4930c842f880866b8d556070c4444287b"
+    },
+    {
+      "source_index": 1039,
+      "sample_id": "boolq-val-001039-23f33f7c",
+      "question": "is seagulls stop it now a real song",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "23f33f7cd36bb9753eedad91e81c1e8d8401195c94d022d290e63dc023c8efee"
+    },
+    {
+      "source_index": 861,
+      "sample_id": "boolq-val-000861-2ffbedff",
+      "question": "do we have to say check in chess",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "2ffbedff992f071d7ddb6ad1915ee52fa59967c6153afeb006712868aee2e2ce"
+    },
+    {
+      "source_index": 1248,
+      "sample_id": "boolq-val-001248-4a9b1ac9",
+      "question": "do c++ strings need to be null terminated",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4a9b1ac9d1ef70746ad30aa17e8131accab1eade21d890b508346dddeb0bdd70"
+    },
+    {
+      "source_index": 2545,
+      "sample_id": "boolq-val-002545-38d538da",
+      "question": "is there a book for harry potter and the cursed child",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "38d538daaad65c9a83e644865b5bf940a99df0096801e7fe1e73d2238bf6bd1f"
+    },
+    {
+      "source_index": 2265,
+      "sample_id": "boolq-val-002265-8ca56710",
+      "question": "is a nissan pathfinder a full size suv",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8ca567107b3857ba21b83601d95793cbea1e6a7dfda3c51866f23c5ef081035f"
+    },
+    {
+      "source_index": 1328,
+      "sample_id": "boolq-val-001328-40da215e",
+      "question": "is there a bone in your ear lobe",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "40da215ea922f12a791a7c618e5f70bc69c11f452904be8362e0e04d4e57a6b5"
+    },
+    {
+      "source_index": 26,
+      "sample_id": "boolq-val-000026-22b49d30",
+      "question": "do penguins have feathers arising from the epidermis",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "22b49d304b279002317ad0ab20c2954ef03b59ba03b29814bc66f7a8138dc843"
+    },
+    {
+      "source_index": 2750,
+      "sample_id": "boolq-val-002750-4d02a9d6",
+      "question": "was looking for mr goodbar based on a true story",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4d02a9d6dba1d4b679c393c5a03798ba395482de156c184098740ba081202f75"
+    },
+    {
+      "source_index": 3113,
+      "sample_id": "boolq-val-003113-3bcc0df3",
+      "question": "can the president pardon someone for a state crime",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3bcc0df3a4889020dc39c5f322bcd63ce23cea1754ca4033b030b95d5d2d6a05"
+    },
+    {
+      "source_index": 192,
+      "sample_id": "boolq-val-000192-e838eae4",
+      "question": "is it possible to type 200 words per minute",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e838eae470ca1c08b10fcc09d4c1e34c94716adef3818fdc8edc6a78673433fa"
+    },
+    {
+      "source_index": 25,
+      "sample_id": "boolq-val-000025-ce227200",
+      "question": "can you drink alcohol with your parents in wisconsin",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "ce2272009dc976d2585a4f7a04b02969b9a0095be3f08c29b34744987591ee43"
+    },
+    {
+      "source_index": 2518,
+      "sample_id": "boolq-val-002518-f6442535",
+      "question": "is cape fear based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f644253504394dae28e096f7306faea83a1f400b352ece0a88791303333721a5"
+    },
+    {
+      "source_index": 3215,
+      "sample_id": "boolq-val-003215-3a2b4f8a",
+      "question": "has the data protection act 1998 been superseded",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3a2b4f8a632f0624e3c14aa8e62c80ab5d9b4c990c0c5fd9bbd2c5d5e8b6464e"
+    },
+    {
+      "source_index": 2700,
+      "sample_id": "boolq-val-002700-81b3fb64",
+      "question": "is internal energy the same as potential energy",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "81b3fb6427bdba850a23810c655d884064a144c3ff3f5f61d0461b0c1ec49fe8"
+    },
+    {
+      "source_index": 1020,
+      "sample_id": "boolq-val-001020-560b17b0",
+      "question": "does everyone die in as above so below",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "560b17b0b6838f3153b25fa83e124df44231d938e4f326d8564dc39d2e9a0302"
+    },
+    {
+      "source_index": 1590,
+      "sample_id": "boolq-val-001590-c29aa7ba",
+      "question": "will there be a new total drama series",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "c29aa7ba5a8e8199273095f4639e090f1495f15bbd2a80d90575a2ed546c7c27"
+    },
+    {
+      "source_index": 1705,
+      "sample_id": "boolq-val-001705-13545180",
+      "question": "does sam come back to the west wing",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "13545180aaa9cf5e1c6873f3e4b90611d406169ac01029ac7ad3345eb30f91b2"
+    },
+    {
+      "source_index": 941,
+      "sample_id": "boolq-val-000941-480eb74f",
+      "question": "does stefan turn off his humanity in season 6",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "480eb74faf369da6a200fa34cb2ea5689b0b19536facc60e41750bd531510f36"
+    },
+    {
+      "source_index": 2851,
+      "sample_id": "boolq-val-002851-3aa4a7c6",
+      "question": "is there a season 8 of once apon a time",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3aa4a7c6e649481bb46a8b96d6eeb2dd37a570b3d2a50084f3c3c906c8d3c820"
+    },
+    {
+      "source_index": 2198,
+      "sample_id": "boolq-val-002198-aaa2f3a7",
+      "question": "is the dark knight a sequel to batman begins",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "aaa2f3a74d9a1156cf65b47aa86efc4e5ca5dfe3048dfb8ae3f5237a99929027"
+    },
+    {
+      "source_index": 414,
+      "sample_id": "boolq-val-000414-24a96683",
+      "question": "will there be a season 4 of game shakers",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "24a966832ac456d27af4d2144cd2c09f43f2426d7c076a5c30f45d7be43c5f7f"
+    },
+    {
+      "source_index": 3066,
+      "sample_id": "boolq-val-003066-889de392",
+      "question": "can you use 5 pound coins in shops",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "889de39229def70fcb80d419e9c7378595bd5b3badb9f9cb32fdf2df21b6a6a6"
+    },
+    {
+      "source_index": 1257,
+      "sample_id": "boolq-val-001257-626988c7",
+      "question": "is the umbilical cord inside the amniotic sac",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "626988c7076a723ad1018e9f8a45eb9c81d966a061ba7d37a26c45324d2644db"
+    },
+    {
+      "source_index": 1658,
+      "sample_id": "boolq-val-001658-85915c7f",
+      "question": "is an undergraduate degree the same as a bachelor's degree",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "85915c7f0b063fbe913049bd2b9b19b82f5e1caae89c73ef845a8787091d2b98"
+    },
+    {
+      "source_index": 1821,
+      "sample_id": "boolq-val-001821-8be13c8c",
+      "question": "is princeton theological seminary part of princeton university",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8be13c8c4e6ef96951a6e88301a42dd79ca3b759fcfc503ab3e327fdc3a13f2c"
+    },
+    {
+      "source_index": 2441,
+      "sample_id": "boolq-val-002441-80e35bcd",
+      "question": "is the movie hostage based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "80e35bcd95b330c56c1cfcfda5da7e915a9025b5bd1761476b19305876445e66"
+    },
+    {
+      "source_index": 260,
+      "sample_id": "boolq-val-000260-542dc149",
+      "question": "is the barber of seville a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "542dc149472b2c40757644b95cda2d263f3fe2eacc760795a700d917bdba2c35"
+    },
+    {
+      "source_index": 603,
+      "sample_id": "boolq-val-000603-f29dcc35",
+      "question": "does maid marian die in once upon a time",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f29dcc356edf5eaf6a2fec9ede4b1f277b74c778eb110a3ba347f6993d39c788"
+    },
+    {
+      "source_index": 159,
+      "sample_id": "boolq-val-000159-3dcc0789",
+      "question": "does bailey die in a dog's purpose",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3dcc07893f15f75617bf6172dffc1f9ee57300639d144d9d8a4f356b0bd8db7c"
+    },
+    {
+      "source_index": 2063,
+      "sample_id": "boolq-val-002063-cac5cde4",
+      "question": "can non violent felons own guns in indiana",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "cac5cde4865c9b0af4bb8c86a19cbfe872967b48fa6832428cbc46db33a3e55b"
+    },
+    {
+      "source_index": 2585,
+      "sample_id": "boolq-val-002585-297ad5c6",
+      "question": "is abu dhabi and dubai the same place",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "297ad5c6aa8eeac7db5da09a9436a0381684cb64761647af6d8322d12572e327"
+    },
+    {
+      "source_index": 746,
+      "sample_id": "boolq-val-000746-643777e4",
+      "question": "can you drink the water in flint now",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "643777e4aab6ac8d1c75091a414e3bc040d55a6ce58a9640eeab415d6cf7ca94"
+    },
+    {
+      "source_index": 777,
+      "sample_id": "boolq-val-000777-4f22ed7c",
+      "question": "is a cookie sheet the same as a sheet pan",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4f22ed7c1e9226ca238b0668a5d94819c3c2e6fe02185e39f0aed1117e4f1d19"
+    },
+    {
+      "source_index": 1017,
+      "sample_id": "boolq-val-001017-bd3d11dd",
+      "question": "does the commuter rail go to new hampshire",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "bd3d11dd3e2360da9176e854c7602310600258736ced37b64c809d1c96539e4f"
+    },
+    {
+      "source_index": 1000,
+      "sample_id": "boolq-val-001000-0e03c5aa",
+      "question": "will there be a jurassic world fallen kingdom sequel",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0e03c5aa2c1d71bbeb924d47f5b486860fa61528625508a3534edbe32f0cf907"
+    },
+    {
+      "source_index": 1675,
+      "sample_id": "boolq-val-001675-21fe5381",
+      "question": "is the trachea part of the upper respiratory system",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "21fe53810b76fa4c33ccc7e09e0b05d9b5966e2908b74c8dd0de3d78e65e3c6a"
+    },
+    {
+      "source_index": 2165,
+      "sample_id": "boolq-val-002165-baeec425",
+      "question": "can staring at a bright light cause blindness",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "baeec425f1cd423198d5a0cfb97bb4ef621b6f2d627b19f8ce02282be7f7c971"
+    },
+    {
+      "source_index": 2556,
+      "sample_id": "boolq-val-002556-35debf0e",
+      "question": "is a shear wall a load bearing wall",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "35debf0eec7ddc85cf623261f3e3cbf1dd687f1eaa81f9a890367e44350dfdf0"
+    },
+    {
+      "source_index": 98,
+      "sample_id": "boolq-val-000098-c5efd44a",
+      "question": "was chasing cars written for grey's anatomy",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "c5efd44afa7780127fa909b308a1fd3adc8ffadaa67683847fba3f3f72f1d39c"
+    },
+    {
+      "source_index": 2058,
+      "sample_id": "boolq-val-002058-81c06944",
+      "question": "does everyone do their own singing in mamma mia",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "81c06944d1fbe2ced81f012c8909b70d90f49851d6c5b5dac5937cca67933ccf"
+    },
+    {
+      "source_index": 395,
+      "sample_id": "boolq-val-000395-08dd000e",
+      "question": "are the make it or break it cast real gymnasts",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "08dd000e899bd7cb5b3e8e2482728bc8fa999a490fa3e667efd8db4eb80f536b"
+    },
+    {
+      "source_index": 145,
+      "sample_id": "boolq-val-000145-a25dacb6",
+      "question": "is ncis new orleans over for the season",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a25dacb6c279e99acb20e250551a56afb6a6933654a97244f4ddec7dc2ab5042"
+    },
+    {
+      "source_index": 2572,
+      "sample_id": "boolq-val-002572-0dea9196",
+      "question": "are all members of the four seasons still alive",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0dea9196f6c4b6b0d0760123d71ab370ffb66f56b715a0e6eda12831fac7f644"
+    },
+    {
+      "source_index": 1828,
+      "sample_id": "boolq-val-001828-9f6365be",
+      "question": "do male and female highland cows have horns",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9f6365be26f305bcfba83d7856ba85fc0c2e89c9d160e87c8ce7b6c46e75d894"
+    },
+    {
+      "source_index": 1936,
+      "sample_id": "boolq-val-001936-0d5db2d5",
+      "question": "can you shoot .38 long colt in .38 special",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0d5db2d5b76722e309d0acba62976ec782b82207306c4c52b7f7c694b54bf53b"
+    },
+    {
+      "source_index": 1407,
+      "sample_id": "boolq-val-001407-34bc9d2b",
+      "question": "can you run on a caught foul ball",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "34bc9d2b198597256cbb053e524f7e4bde57625aa936b7c8f8155ba848fb297e"
+    },
+    {
+      "source_index": 214,
+      "sample_id": "boolq-val-000214-5e2875d4",
+      "question": "are liquor stores open on memorial day oklahoma",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5e2875d4968c16e99a17d112c35852a1064e4105ffd1e4145b0365f64702b550"
+    },
+    {
+      "source_index": 804,
+      "sample_id": "boolq-val-000804-46c71c46",
+      "question": "do i have to give my name to a police officer",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "46c71c4626c105e05351afb0b506cf09622df51e6b132eba25256be6f51c86e7"
+    },
+    {
+      "source_index": 1622,
+      "sample_id": "boolq-val-001622-8950328f",
+      "question": "is there a season 7 of shameless us",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "8950328fe883b51bb5984781c97e5cab165f3de195a63b99414e22a58d4a7f68"
+    },
+    {
+      "source_index": 219,
+      "sample_id": "boolq-val-000219-0e7fba78",
+      "question": "does david brooks still write for ny times",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0e7fba787cd0336d3be07ea3ae4eb0deba8246eb52d6a8339b15130394825e8b"
+    },
+    {
+      "source_index": 1426,
+      "sample_id": "boolq-val-001426-63253f4d",
+      "question": "are tom riddle and voldemort the same person",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "63253f4d4364157180efe733b02caee79ca18e4e4d9f272ad50c97597a236709"
+    },
+    {
+      "source_index": 2142,
+      "sample_id": "boolq-val-002142-63518055",
+      "question": "did estonia used to be part of russia",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "63518055a68380644cdb269922230d27c90ae892ec98a7366c4edc70ab63b275"
+    },
+    {
+      "source_index": 798,
+      "sample_id": "boolq-val-000798-b261322c",
+      "question": "do you get the money you win on jeopardy",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b261322c7e7fe5220e5504f2097dde40dd9c39050b17af806e43f666c59b9bc4"
+    },
+    {
+      "source_index": 1457,
+      "sample_id": "boolq-val-001457-797defeb",
+      "question": "do you need an amplifier for powered speakers",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "797defebed44c3d2230fb35519341913ccc0b862fcc4d009fc9bbd8ad3e10bf6"
+    },
+    {
+      "source_index": 1779,
+      "sample_id": "boolq-val-001779-6f80534f",
+      "question": "can a local maximum also be an absolute maximum",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6f80534f5fb1e4971fc2ea5f2f2914c58e03a154972f1656780ec16a40b9f641"
+    },
+    {
+      "source_index": 147,
+      "sample_id": "boolq-val-000147-d7e88e1d",
+      "question": "does smeagol die in lord of the rings",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "d7e88e1d0d101f2d433a4a5b9ce4bc1fcd19da5c78741b7497ffb92c71710080"
+    },
+    {
+      "source_index": 752,
+      "sample_id": "boolq-val-000752-72b48b5f",
+      "question": "are billy and nora from the thundermans twins",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "72b48b5fb912b678be861eaf9eca0ffff44972cc5b1ce66a6bfcaaacbbe3fe4d"
+    },
+    {
+      "source_index": 2537,
+      "sample_id": "boolq-val-002537-815d0451",
+      "question": "is war room movie based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "815d0451461ec2ff8fb401b7e49ec326dca82d05bbe1aafce5af163a7da080fc"
+    },
+    {
+      "source_index": 185,
+      "sample_id": "boolq-val-000185-b6c49593",
+      "question": "is there a military base in san diego",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b6c495938a756227cda96e78306ff9f8def2fcb1ac3fc37cd71a152dd3089bec"
+    },
+    {
+      "source_index": 1911,
+      "sample_id": "boolq-val-001911-bf0bb529",
+      "question": "is johnson and wales a for profit school",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "bf0bb52944bd28411b8b2be105abbd277ef96c13dcdb22316d88b817f1f66018"
+    },
+    {
+      "source_index": 232,
+      "sample_id": "boolq-val-000232-81a7180e",
+      "question": "is season 4 of better call saul out",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "81a7180ed55ffd194487d56513c870ccc9dd96fbd881a6a7c74f5ab21a44da4b"
+    },
+    {
+      "source_index": 1462,
+      "sample_id": "boolq-val-001462-746268f1",
+      "question": "is hawaii five-0 still on tv",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "746268f18eb1f849831cbb81d6bf658716f40233e994e394b4fe2cb32c08626b"
+    },
+    {
+      "source_index": 574,
+      "sample_id": "boolq-val-000574-7e712c9f",
+      "question": "have we seen the bottom of the mariana trench",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "7e712c9faf295b1e70f702335380072822824370cb34a21d6be59b37f47f5d8b"
+    },
+    {
+      "source_index": 126,
+      "sample_id": "boolq-val-000126-bf5b90c2",
+      "question": "is there going to be another golden compass movie",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "bf5b90c2124cc594acd9c07e96219ea926dc28899450106c5cf0bac11d6221b3"
+    },
+    {
+      "source_index": 1234,
+      "sample_id": "boolq-val-001234-626a022d",
+      "question": "does birth certificate count as a form of id",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "626a022d272ef19730f1e62080aba3be7e5476c4183d866bb050a96b1ce15ae6"
+    },
+    {
+      "source_index": 1961,
+      "sample_id": "boolq-val-001961-5fdda278",
+      "question": "do netherland dwarf rabbits like to be held",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5fdda278832b0498886fc6dac841fba152452d3a6a44d13717dfa9f9c483f475"
+    },
+    {
+      "source_index": 3166,
+      "sample_id": "boolq-val-003166-88abf33f",
+      "question": "is gear oil the same as motor oil",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "88abf33fb8c8048c72695e23fde1572ad78d88c8f59f2830fb69205737a73e47"
+    },
+    {
+      "source_index": 2176,
+      "sample_id": "boolq-val-002176-7652e72c",
+      "question": "is there an in and out burger in maryland",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "7652e72c44b9533b06d9009f91f9f666abed0752d96bdf9a338ae8ca4e89d461"
+    },
+    {
+      "source_index": 2053,
+      "sample_id": "boolq-val-002053-517d42e7",
+      "question": "can a company be listed in different countries",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "517d42e7d8972bd89942c64d048603853ca0171d4314e9a2be4fe53b7236a70c"
+    },
+    {
+      "source_index": 1427,
+      "sample_id": "boolq-val-001427-974cddb8",
+      "question": "are sweat glands part of the lymphatic system",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "974cddb8e0c52c04d4877d32b83a2d67696cc532fa080bed6c46055c751a311b"
+    },
+    {
+      "source_index": 1253,
+      "sample_id": "boolq-val-001253-d27a4d73",
+      "question": "is sudan and south sudan the same country",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "d27a4d73745117540c592a408afb17d7b3eb88aca98c52b8dfc07c9e9f859e4e"
+    },
+    {
+      "source_index": 2447,
+      "sample_id": "boolq-val-002447-00177e92",
+      "question": "can puerto rico vote for the us president",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "00177e92ed8440f96369486cfb438bdd7489a440f719cad32713fdd6b985153c"
+    },
+    {
+      "source_index": 3133,
+      "sample_id": "boolq-val-003133-f33c6b1d",
+      "question": "is the chernobyl nuclear power plant still operating",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f33c6b1dd9015c23dfdeea418ca87ad9b00a953da316a05842f221eefc3fbffe"
+    },
+    {
+      "source_index": 21,
+      "sample_id": "boolq-val-000021-149e3671",
+      "question": "does a spark plug keep an engine running",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "149e3671274b43066b39e045a563c46c9cec86a6f8747e835345a44efd4b14ec"
+    },
+    {
+      "source_index": 705,
+      "sample_id": "boolq-val-000705-1af9a577",
+      "question": "is there anything higher than a 100 dollar bill",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1af9a577cef7ae264503da0b2e3f8945cea117817cf2f3d0e14ce0219ec205e8"
+    },
+    {
+      "source_index": 3262,
+      "sample_id": "boolq-val-003262-2d8b3231",
+      "question": "is the iphone se before the iphone 6",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "2d8b3231dfd1b46aa0802f13dfab8308de853024ff11d1e683f1a4f8593c96ce"
+    },
+    {
+      "source_index": 1172,
+      "sample_id": "boolq-val-001172-19e3f0c1",
+      "question": "are the falkland islands part of the commonwealth",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "19e3f0c1d05f2e90eb60b56f8b03d5a67c0675997073fc3678897b7251a245b9"
+    },
+    {
+      "source_index": 2143,
+      "sample_id": "boolq-val-002143-9dcd8cd0",
+      "question": "was everything everything based on a true story",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "9dcd8cd0f380e92d4bf1a1780281d39e85aecef34ce5e73c4f7f94b1f15b10db"
+    },
+    {
+      "source_index": 2029,
+      "sample_id": "boolq-val-002029-7f8f1b6d",
+      "question": "is it illegal to deface money in the uk",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "7f8f1b6d2d50f051b7d648ebb1958635a0945baaf4e6c0d05c5af5112310ab21"
+    },
+    {
+      "source_index": 1879,
+      "sample_id": "boolq-val-001879-876a1640",
+      "question": "is pretty little liars filmed in stars hollow",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "876a1640fcfcedd78da4ea3371f3166a27d7c0a0c1e3f0176892527cd5e795ba"
+    },
+    {
+      "source_index": 24,
+      "sample_id": "boolq-val-000024-1af56b1e",
+      "question": "is a fire 7 the same as a kindle",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1af56b1ea6c53ad035eb1eaf2c61827badb06d5a1b5e2b29ec598eb183136a28"
+    },
+    {
+      "source_index": 1611,
+      "sample_id": "boolq-val-001611-0c55f047",
+      "question": "will there be more episodes of spirit riding free",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "0c55f0479270b3a5cb01215f0e3acdd9985e2b0a2a371b502542b0991c37ffb3"
+    },
+    {
+      "source_index": 530,
+      "sample_id": "boolq-val-000530-6b02386b",
+      "question": "is smaug the only dragon in middle earth",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6b02386b137ab3ace2c005427654d0f42d3fc4e5a8d6065fb873329ad069030f"
+    },
+    {
+      "source_index": 1430,
+      "sample_id": "boolq-val-001430-6986a5e8",
+      "question": "do you have to pay for tvnz on demand",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "6986a5e8e42f80b781d2850702696e231ef07c8e8961168dc0b4ed6fdc56a834"
+    },
+    {
+      "source_index": 184,
+      "sample_id": "boolq-val-000184-5a1a16fa",
+      "question": "have scotland ever been in the world cup final",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5a1a16fa65a5e9c3d33f4d86d29b55c51874ab1b2e30503e2d69c731018ed87c"
+    },
+    {
+      "source_index": 2250,
+      "sample_id": "boolq-val-002250-5332ad5d",
+      "question": "is a master of fine arts a terminal degree",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5332ad5dc320fed49131a4c821925cd12a13336ab23fb6c8e83401cc4266ba52"
+    },
+    {
+      "source_index": 655,
+      "sample_id": "boolq-val-000655-5256241c",
+      "question": "did kaka play in the 2002 world cup",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5256241cb12fd50f85055cba14fd85540d2417a1ee0d5a758a09b58ee973b671"
+    },
+    {
+      "source_index": 2743,
+      "sample_id": "boolq-val-002743-a7bd3ebd",
+      "question": "can i get my ashes shot into space",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a7bd3ebd132378fdba9baa682d83330a27e911462e77afda69e9d4c330a54c4b"
+    },
+    {
+      "source_index": 2587,
+      "sample_id": "boolq-val-002587-1c4790f6",
+      "question": "is there a garbage patch in the pacific ocean",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "1c4790f67e7166e6e91f82a941a528c757426e9ad0bc45a5c5febb67e96a70be"
+    },
+    {
+      "source_index": 2302,
+      "sample_id": "boolq-val-002302-40aee895",
+      "question": "does all life require the same essential elements",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "40aee895ebbcf5b350f9fbdf39926ae816781d5276a3039fcd800353710a8445"
+    },
+    {
+      "source_index": 1456,
+      "sample_id": "boolq-val-001456-00293de1",
+      "question": "is the civil rights act in the constitution",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "00293de1abc39aae0747a8c6cb5e69f99eafdacea92f851bbee7b5261b5981ab"
+    },
+    {
+      "source_index": 1422,
+      "sample_id": "boolq-val-001422-3ab17cdc",
+      "question": "is take me home country roads about virginia",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "3ab17cdcf97a098daadc0067c1652975f5e88f51e2d8a9ccf3fa289d363bbc5e"
+    },
+    {
+      "source_index": 973,
+      "sample_id": "boolq-val-000973-b90594a7",
+      "question": "is there going to be season 3 of daredevil",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "b90594a773aa165790fc308f966d8a283d2040a88bad9667e236129bb75dc1ff"
+    },
+    {
+      "source_index": 2558,
+      "sample_id": "boolq-val-002558-03fe90ed",
+      "question": "has south africa qualified for the world cup",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "03fe90ed0e440043bcfa7ca8e2d1ad6979121928529e7fd44cb6335370ff1327"
+    },
+    {
+      "source_index": 2528,
+      "sample_id": "boolq-val-002528-624b0351",
+      "question": "did blake shelton wrote mine would be you",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "624b0351a20d3e1e1b3924c25bcd45796e61326036a1cf80185da8ee3b5f54fd"
+    },
+    {
+      "source_index": 1903,
+      "sample_id": "boolq-val-001903-371eec82",
+      "question": "does a will have to be a legal document",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "371eec8244da2bdc02b33d5be762a4612c7bdde64cb23714366e37b032370fef"
+    },
+    {
+      "source_index": 2235,
+      "sample_id": "boolq-val-002235-d382f690",
+      "question": "do they still make the chrysler pt cruiser",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "d382f69085a1de284500726a66f45c937f54c459b016d190215ecb720d6439cb"
+    },
+    {
+      "source_index": 3181,
+      "sample_id": "boolq-val-003181-4e47b7e5",
+      "question": "is film stars don't die in liverpool a true story",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "4e47b7e5ec58bf0eb1ab6dc039e9d7bd0471ecbedee2f1171eaf4baa045fee07"
+    },
+    {
+      "source_index": 409,
+      "sample_id": "boolq-val-000409-67005f54",
+      "question": "is revenge of the mummy a roller coaster",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "67005f547596c3cb81623c77db0927ca33eb7548ed6648d2457031250de5d6df"
+    },
+    {
+      "source_index": 2817,
+      "sample_id": "boolq-val-002817-5dc79595",
+      "question": "is it the same world cup trophy every year",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5dc79595305448ef20af4653e957bb74d16df96373df01ee344094934fa641eb"
+    },
+    {
+      "source_index": 2175,
+      "sample_id": "boolq-val-002175-e200eb58",
+      "question": "is soy sauce and worcester sauce the same",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e200eb583564d6a8acbe4847636135e78dbaaf541340fd1fac3d63c3265e8c3b"
+    },
+    {
+      "source_index": 2474,
+      "sample_id": "boolq-val-002474-95a1a95a",
+      "question": "is the tower of terror in magic kingdom",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "95a1a95a20180a338c9b11d9e3725b278447465e983eab9a2a9a88d7c96ba73e"
+    },
+    {
+      "source_index": 653,
+      "sample_id": "boolq-val-000653-47e00257",
+      "question": "are beef short ribs the same as spare ribs",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "47e0025742ac12e1d8c20d9121945a3a772c4495371d619482c34950a0f6d42e"
+    },
+    {
+      "source_index": 1830,
+      "sample_id": "boolq-val-001830-a32ac7e1",
+      "question": "do gram negative bacteria have a cell wall",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "a32ac7e114e9b5e52d7075797b54fd968fee21544a99ba2a5a4e4ba650e8cb38"
+    },
+    {
+      "source_index": 1715,
+      "sample_id": "boolq-val-001715-197793c0",
+      "question": "is st george's chapel in westminster abbey",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "197793c090e1d6c5ca1ed0ce17293fa32a7fe54d620bc2a262965f5426871115"
+    }
+  ],
+  "sha256": "935cd7af6bea5942c56f035a4f9c8df7e8430ce2513a9ee3242866a0ead51fce"
+}

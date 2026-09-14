@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0.0",
+  "dataset": "BoolQ validation from USC pinned commit",
+  "source_count": 3270,
+  "selection": "label-stratified random sample without replacement",
+  "seed": 20260912,
+  "items": [
+    {
+      "source_index": 1675,
+      "sample_id": "boolq-val-001675-21fe5381",
+      "question": "is the trachea part of the upper respiratory system",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "21fe53810b76fa4c33ccc7e09e0b05d9b5966e2908b74c8dd0de3d78e65e3c6a"
+    },
+    {
+      "source_index": 2768,
+      "sample_id": "boolq-val-002768-5acaa4f3",
+      "question": "can you take a picture of anyone in public uk",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "5acaa4f3516ac4cefea83c572d2913763733a62cb72be27a7f9765304a4bf2f4"
+    },
+    {
+      "source_index": 2545,
+      "sample_id": "boolq-val-002545-38d538da",
+      "question": "is there a book for harry potter and the cursed child",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "38d538daaad65c9a83e644865b5bf940a99df0096801e7fe1e73d2238bf6bd1f"
+    },
+    {
+      "source_index": 2948,
+      "sample_id": "boolq-val-002948-53515df5",
+      "question": "is jurassic world the sequel to jurassic park",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "53515df504fa7f3a65320308d0fcfe8d90918349a55e5c91f14577548b2e9989"
+    },
+    {
+      "source_index": 2865,
+      "sample_id": "boolq-val-002865-e3082f4b",
+      "question": "is 866 a toll free number in canada",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e3082f4bd914b7d0dc5b9458b859c4eff355c3594a11f9f57f4fb137f1357b7d"
+    },
+    {
+      "source_index": 2176,
+      "sample_id": "boolq-val-002176-7652e72c",
+      "question": "is there an in and out burger in maryland",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "7652e72c44b9533b06d9009f91f9f666abed0752d96bdf9a338ae8ca4e89d461"
+    },
+    {
+      "source_index": 2063,
+      "sample_id": "boolq-val-002063-cac5cde4",
+      "question": "can non violent felons own guns in indiana",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "cac5cde4865c9b0af4bb8c86a19cbfe872967b48fa6832428cbc46db33a3e55b"
+    },
+    {
+      "source_index": 193,
+      "sample_id": "boolq-val-000193-f7b4f785",
+      "question": "is the rampage movie based on the game",
+      "label": true,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "f7b4f785e694886e95da08de2493c4677a0ebf55d282553f75cbbf194bd5a6eb"
+    },
+    {
+      "source_index": 171,
+      "sample_id": "boolq-val-000171-e5c7281b",
+      "question": "is new zealand on the continent of australia",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "e5c7281b89d600b0e6ece103f925dc4b9cd24175e828125fbe6c30a720cbea3e"
+    },
+    {
+      "source_index": 1121,
+      "sample_id": "boolq-val-001121-835c248c",
+      "question": "is the cat part of the chinese zodiac",
+      "label": false,
+      "source_commit": "69aa1012e2dfc4c57905bedf057c4e2fbc036101",
+      "question_sha256": "835c248cb822b41bb90947708bdad324c4458f8cd4ff958296484a1c5225d297"
+    }
+  ],
+  "sha256": "8a28ef837a2caa201c80bea81607fa0688afe1878bbe6620af213d6171a0e0b0"
+}
