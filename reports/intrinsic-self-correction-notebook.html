@@ -186,6 +186,126 @@
       a { color: inherit; text-decoration: none; }
       .conversation { break-inside: avoid; }
     }
+
+    /* Carbon-inspired override: plain hierarchy, white paper, two accents only. */
+    :root {
+      --ink: #161616;
+      --muted: #525252;
+      --paper: #ffffff;
+      --card: #ffffff;
+      --line: #a8a8a8;
+      --navy: #0f62fe;
+      --navy-soft: #edf5ff;
+      --teal: #0f62fe;
+      --teal-soft: #edf5ff;
+      --red: #da1e28;
+      --red-soft: #fff1f1;
+      --amber: #161616;
+      --amber-soft: #f4f4f4;
+      --violet: #161616;
+      --radius: 0;
+      --shadow: none;
+    }
+    html { scroll-behavior: auto; }
+    :focus-visible { outline-color: var(--navy); }
+    body, button, .button { font-family: "IBM Plex Sans", "Arial", sans-serif; }
+    code, .mono, pre { font-family: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace; }
+    .math, h1, h2, h3, .hero-question, .question, .metric .value, .result-banner .headline { font-family: "IBM Plex Sans", "Arial", sans-serif; letter-spacing: 0; }
+    body { background: #fff; line-height: 1.55; }
+    .wrap { width: min(980px, calc(100% - 2rem)); }
+    h1 { max-width: 780px; font-size: clamp(2.5rem, 6vw, 4.9rem); font-weight: 400; line-height: 1; letter-spacing: -.035em; }
+    h2 { max-width: 780px; font-size: clamp(1.7rem, 3vw, 2.5rem); font-weight: 500; line-height: 1.12; }
+    h3 { font-weight: 600; }
+    .lede { color: var(--ink); font-size: 1.2rem; }
+    .eyebrow { color: var(--muted); font-size: .74rem; letter-spacing: .08em; }
+    .section { padding: 3.5rem 0; border-top: 1px solid #e0e0e0; }
+    .section.alt { background: #fff; }
+    .section-head { margin-bottom: 1.5rem; }
+    .section-index { width: 2rem; color: var(--navy); font-family: "IBM Plex Mono", monospace; font-size: .9rem; }
+    .hero { min-height: auto; padding: 5rem 0 3.5rem; background: #fff; }
+    .hero-grid { grid-template-columns: minmax(0, 1.45fr) minmax(260px, .55fr); gap: 2rem; }
+    .hero-question { margin: 1.25rem 0; padding: 1rem 1.15rem; border-left: 3px solid var(--navy); background: #f4f4f4; font-size: 1.1rem; font-weight: 400; }
+    .meta-card, .card, .metric, .note, details, .conversation, .flow-node, .explain-panel, .table-wrap { border: 1px solid #a8a8a8; border-radius: 0; background: #fff; box-shadow: none; }
+    .meta-card, .card, .metric, .flow-node, .explain-panel { padding: 1rem; }
+    .meta-card dd { font-weight: 500; }
+    .tag { padding: .22rem .48rem; border: 1px solid currentColor; border-radius: 0; background: #fff !important; font-weight: 600; }
+    .tag::before { width: .4rem; height: .4rem; border-radius: 0; }
+    .tag.verified, .tag.adaptation { color: var(--navy); }
+    .tag.risk { color: var(--red); }
+    .tag.interpretation, .tag.hypothesis { color: var(--ink); }
+    button, .button { min-height: 2.4rem; padding: .45rem .75rem; border-radius: 0; background: var(--navy); font-size: .86rem; font-weight: 600; }
+    button:hover, .button:hover { background: #0043ce; }
+    button.secondary { border-color: var(--ink); color: var(--ink); background: #fff; }
+    button.secondary:hover { color: var(--ink); background: #f4f4f4; }
+    .toc { border-bottom-color: #a8a8a8; background: #fff; backdrop-filter: none; }
+    .toc-inner { gap: 0; padding: .45rem 0; }
+    .toc a { border-right: 1px solid #d0d0d0; border-radius: 0; color: var(--ink); font-weight: 500; }
+    .toc a:hover, .toc a[aria-current="true"] { color: #fff; background: var(--navy); }
+    .two-col, .three-col, .comparison, .matrix-layout, .audit-grid { gap: 1rem; }
+    .callout { border-left-width: 3px; border-radius: 0; background: #f4f4f4; }
+    .callout.warning { border-left-color: var(--red); background: #fff; }
+    .callout.good { border-left-color: var(--navy); background: #fff; }
+    .flow { margin: 1.5rem 0; gap: .5rem; }
+    .flow-node { min-height: 0; }
+    .flow-arrow { color: var(--navy); font-size: 1.4rem; }
+    .comparison > div { border-radius: 0; background: #fff !important; }
+    .comparison .yes { border-left: 3px solid var(--navy); }
+    .comparison .no { border-left: 3px solid var(--red); }
+    .matrix { gap: .35rem; }
+    .matrix > div { min-height: 5rem; border-radius: 0; }
+    .matrix button { border: 1px solid #a8a8a8; border-left-width: 4px; border-radius: 0; background: #fff; }
+    .matrix button:hover, .matrix button.selected { border-color: var(--ink); transform: none; outline: 2px solid var(--navy); outline-offset: 1px; }
+    .matrix .cc, .matrix .ww { border-left-color: var(--ink); background: #f4f4f4; }
+    .matrix .cw { border-left-color: var(--red); background: #fff; }
+    .matrix .wc { border-left-color: var(--navy); background: #fff; }
+    .equation-block { border-left: 3px solid var(--navy); border-radius: 0; background: #f4f4f4; }
+    details { border-radius: 0; }
+    details summary { color: var(--ink); font-weight: 600; }
+    details[open] summary { border-bottom-color: #a8a8a8; }
+    .metric-grid { gap: .65rem; }
+    .metric .value { color: var(--ink); font-size: 1.75rem; font-weight: 400; }
+    .toggle { border-radius: 0; background: #fff; }
+    .toggle button { border-radius: 0; }
+    .toggle button[aria-pressed="true"] { color: #fff; background: var(--navy); box-shadow: none; }
+    .result-banner { border: 2px solid var(--red); border-radius: 0; background: #fff; }
+    .result-banner .headline { color: var(--red); font-weight: 500; }
+    .stat-line { border-bottom-color: #d0d0d0; }
+    .claim { border-left-width: 3px; border-radius: 0; background: #fff; }
+    .claim.verified { border-left-color: var(--navy); }
+    .claim.interpretation, .claim.hypothesis { border-left-color: var(--ink); }
+    .conversation summary::marker { color: var(--navy); }
+    .conversation .conversation-title, .flow-node strong { color: var(--ink); }
+    .question { color: var(--ink); font-size: 1rem; }
+    .turn { border-radius: 0; }
+    .turn.user, .turn.assistant { background: #f4f4f4; }
+    th { color: var(--ink); background: #f4f4f4; }
+    .not-comparable { color: var(--red); }
+    .provenance div { border-bottom-color: #d0d0d0; }
+    @media print {
+      body { font-family: "IBM Plex Sans", Arial, sans-serif; }
+      .hero, .section.alt { background: #fff; }
+      .section { border-top-color: #a8a8a8; }
+    }
+
+    /* Reduce white glare: neutral canvas, pale IBM Blue for explanatory surfaces. */
+    body, .hero { background: #f4f4f4; }
+    .section { background: #fff; }
+    .section.alt { background: #f4f4f4; }
+    .meta-card, .flow-node, .explain-panel { background: #edf5ff; border-color: #78a9ff; }
+    .card, .metric, details, .conversation, .table-wrap { background: #fff; }
+    .metric, .conversation { background: #f4f4f4; }
+    .comparison .yes { background: #edf5ff !important; border-left-color: var(--navy); }
+    .comparison .no { background: #fff1f1 !important; border-left-color: var(--red); }
+    .callout, .equation-block { background: #edf5ff; }
+    .callout.warning { background: #fff1f1; }
+    .result-banner { background: #fff1f1; }
+    .turn.user { background: #edf5ff; }
+    .turn.assistant { background: #fff; }
+    .tag.verified, .tag.adaptation { background: #edf5ff !important; }
+    .tag.risk { background: #fff1f1 !important; }
+    .tag.interpretation, .tag.hypothesis { background: #f4f4f4 !important; }
+    .toggle { background: #edf5ff; }
+    .toggle button[aria-pressed="true"] { background: var(--navy); }
   </style>
 </head>
 <body>
@@ -195,7 +315,7 @@
         <p class="eyebrow">Research notebook · Supervisor meeting</p>
         <p><span class="tag adaptation">Audited smoke adaptation</span></p>
         <h1>Intrinsic<br>Self-Correction</h1>
-        <p class="lede">Một audit nhỏ về điều gì xảy ra khi LLM được hỏi: <em>“Are you sure?”</em></p>
+        <p class="lede">Notebook này đi từ cách đặt bài toán, định nghĩa và đo lường, đến một smoke experiment đã chạy và các điều kiện cần có để biến nó thành một hướng nghiên cứu có thể bảo vệ.</p>
         <blockquote class="hero-question">“Khi model tự xem xét lại, recovery có lớn hơn regression không?”</blockquote>
         <p class="compact">[Your name] · [Meeting date] · BoolQ audited smoke replication</p>
         <div class="actions">
@@ -218,7 +338,7 @@
 
   <nav class="toc" aria-label="Nội dung">
     <div class="wrap toc-inner">
-      <a href="#problem">Problem</a><a href="#fundamentals">Fundamentals</a><a href="#metrics">Metrics</a><a href="#experiment">Experiment</a><a href="#result">Result</a><a href="#audit">Audit</a><a href="#context">Context</a><a href="#limits">Limits</a><a href="#discussion">Discussion</a><a href="#appendix">Appendix</a>
+      <a href="#problem">Problem</a><a href="#fundamentals">Fundamentals</a><a href="#metrics">Metrics</a><a href="#experiment">Experiment</a><a href="#result">Result</a><a href="#audit">Audit</a><a href="#context">Context</a><a href="#limits">Limits</a><a href="#requirements">Requirements</a><a href="#discussion">Discussion</a><a href="#appendix">Appendix</a>
     </div>
   </nav>
 
@@ -228,21 +348,57 @@
         <div class="section-head">
           <p class="eyebrow"><span class="section-index">01</span> Problem statement</p>
           <h2>“Đổi đáp án” không đồng nghĩa “sửa lỗi”.</h2>
-          <p>LLM có thể đổi từ sai sang đúng sau một prompt xác nhận. Nhưng cùng cơ chế đó có thể đảo một đáp án đúng thành sai. Câu hỏi nghiên cứu là <strong>net effect</strong>, không phải chỉ đếm số lần output thay đổi.</p>
+          <p>Intrinsic self-correction hấp dẫn vì nó hứa hẹn cải thiện câu trả lời ngay tại inference time mà không cần training, tool hay external verifier. Tuy nhiên, một prompt như <em>“Are you sure?”</em> không cung cấp thêm bằng chứng về thế giới. Nó chỉ thay đổi context mà model dùng để sinh câu trả lời tiếp theo.</p>
+          <p>Vì vậy, model có thể đổi từ sai sang đúng, nhưng cũng có thể đổi từ đúng sang sai. Bài toán cần đo không phải là “model có đổi output hay không”, mà là <strong>revision làm phân bố correctness thay đổi như thế nào và net effect có dương hay không</strong>.</p>
         </div>
         <div class="two-col">
           <article class="card">
             <span class="tag verified">Verified context</span>
-            <h3>Điểm xuất phát</h3>
-            <p>ACL 2025 báo cáo rằng intrinsic self-correction có thể làm giảm accuracy trên Yes/No questions; paper phân tích cả correct-to-wrong và wrong-to-correct transitions.</p>
+            <h3>Khoảng trống trong cách nhìn đơn giản</h3>
+            <p>Chỉ báo cáo accuracy trước và sau revision sẽ che mất hai chuyển động trái chiều: recovery và regression. Chỉ phân tích các initial-wrong items lại tạo oracle selection vì evaluator đã dùng label để quyết định item nào được revision.</p>
+            <p>ACL 2025 báo cáo rằng intrinsic self-correction có thể làm giảm accuracy trên Yes/No questions và nhấn mạnh correct-to-wrong transitions. Notebook này bổ sung một evaluator audit: giữ mọi item, tách đầy đủ bốn transition states và lưu exact conversation history.</p>
             <p><a href="https://aclanthology.org/2025.acl-long.1314/">Đọc ACL 2025 paper</a></p>
           </article>
           <article class="card">
             <span class="tag hypothesis">Working question</span>
-            <h3>Ta đang kiểm tra gì?</h3>
-            <p>Trong BoolQ smoke run, một confirmatory revision có tạo recovery đủ lớn để bù regression không?</p>
-            <p class="compact">Mục đích run này: validate experimental integrity. Không dùng <span class="mono">n=10</span> để xác nhận hay bác bỏ paper hypothesis.</p>
+            <h3>Câu hỏi trung tâm</h3>
+            <p>Trên một tập BoolQ cố định, khi mọi item đều nhận cùng confirmatory revision, wrong-to-correct recovery có đủ lớn để bù correct-to-wrong regression không?</p>
+            <p>Đây là paired question: cùng một item được quan sát ở round 0 và round 1. Label chỉ được dùng sau generation để tính correctness; label không được phép quyết định prompt, revision hay retry.</p>
           </article>
+        </div>
+        <div class="table-wrap" style="margin-top:1rem">
+          <table>
+            <caption class="sr-only">Định nghĩa chính thức của bài toán nghiên cứu</caption>
+            <thead><tr><th>Thành phần</th><th>Định nghĩa trong nghiên cứu này</th></tr></thead>
+            <tbody>
+              <tr><td>Unit of analysis</td><td>Một BoolQ question có một ground-truth Yes/No label; cùng item được theo dõi qua hai rounds.</td></tr>
+              <tr><td>Intervention</td><td>Sau initial answer, thêm exact raw answer vào conversation history rồi gửi một neutral confirmatory prompt. Intervention không chứa correctness signal.</td></tr>
+              <tr><td>Outcome</td><td>Parsed correctness ở round 0 và round 1, cùng transition state CC, CW, WC hoặc WW.</td></tr>
+              <tr><td>Primary estimand</td><td>Paired accuracy change <span class="math">ΔA=A<sub>1</sub>−A<sub>0</sub></span>, tương đương net số recovery trừ regression trên toàn bộ denominator.</td></tr>
+              <tr><td>Decision criterion</td><td>Revision có net benefit trong tested setting khi <span class="math">ΔA&gt;0</span> và uncertainty đủ hẹp để loại các effect không có ý nghĩa thực tế.</td></tr>
+              <tr><td>Scope of claim</td><td>Chỉ claim về observed behavior dưới model, prompt, evaluator và dataset đã chỉ định; không suy ra model “biết” mình sai nếu chưa có mechanism evidence.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="callout" style="margin-top:1rem">
+          <h3>Argument chain của hướng nghiên cứu</h3>
+          <ol class="question-list compact">
+            <li>Revision prompt thay đổi conditional distribution nhưng không thêm factual evidence.</li>
+            <li>Thay đổi đó có thể tạo recovery lẫn regression trên cùng một task.</li>
+            <li>Net benefit chỉ tồn tại khi recovery gain lớn hơn regression cost.</li>
+            <li>Muốn kết luận đáng tin, experiment phải loại oracle leakage, evaluator artifacts và unfair compute comparison.</li>
+          </ol>
+        </div>
+        <details open>
+          <summary>Research questions và falsifiable hypotheses</summary>
+          <p><strong>RQ1 — Net effect.</strong> Accuracy thay đổi bao nhiêu sau một neutral confirmatory revision trên một fixed dataset?</p>
+          <p><strong>RQ2 — Transition mechanism.</strong> Net change đến từ recovery, regression, hay cả hai? Initial accuracy ảnh hưởng trade-off này thế nào?</p>
+          <p><strong>RQ3 — Evaluation sensitivity.</strong> Kết luận thay đổi ra sao khi invalid/error được giữ lại, khi dùng free generation thay vì forced Yes/No scoring, hoặc khi prompt wording thay đổi?</p>
+          <p><strong>RQ4 — Mitigation.</strong> Question repetition có giảm regression mà không làm mất recovery không?</p>
+          <p><strong>H1.</strong> Ở sample đủ lớn, confirmatory revision tạo cả WC và CW transitions. <strong>H2.</strong> Ít nhất trong một tested setting, regression cost bù hoặc vượt recovery gain nên ΔA ≤ 0. <strong>H3.</strong> Question repetition làm conditional regression thấp hơn plain confirmatory prompt. Đây là hypotheses phải có khả năng bị bác bỏ; smoke run không được dùng để xác nhận chúng.</p>
+        </details>
+        <div class="callout good">
+          <strong>Cách nói ngắn gọn.</strong> Nghiên cứu này không hỏi model có bao giờ tự sửa đúng hay không. Nó hỏi một policy luôn yêu cầu model reconsider có tạo lợi ích ròng trên toàn bộ workload hay chỉ chuyển lỗi từ nhóm item này sang nhóm khác.
         </div>
       </div>
     </section>
@@ -252,11 +408,26 @@
         <div class="section-head">
           <p class="eyebrow"><span class="section-index">02</span> Fundamentals</p>
           <h2>Intrinsic revision chỉ dùng model và history của chính nó.</h2>
-          <p><strong>Intrinsic self-correction</strong> nghĩa là model nhận initial answer của chính nó và một revision prompt, không nhận ground truth, tool result, retrieved evidence hay human judgment.</p>
+          <p><strong>Intrinsic self-correction</strong> là quá trình model sửa câu trả lời trước đó chỉ bằng năng lực nội tại và conversational context. Model không nhận ground truth, tool result, retrieved evidence, human judgment hoặc verifier signal. Nếu có các tín hiệu đó, ta đang nghiên cứu externally guided correction, không còn là strict intrinsic correction.</p>
+        </div>
+        <div class="table-wrap" style="margin-bottom:1rem">
+          <table>
+            <caption class="sr-only">Các khái niệm cốt lõi của intrinsic self-correction</caption>
+            <thead><tr><th>Khái niệm</th><th>Định nghĩa dùng trong notebook</th><th>Tại sao quan trọng?</th></tr></thead>
+            <tbody>
+              <tr><td>Initial answer</td><td>Output <span class="math">y<sub>0</sub></span> trước mọi yêu cầu reconsideration.</td><td>Là baseline paired cho chính item đó.</td></tr>
+              <tr><td>Revision</td><td>Output <span class="math">y<sub>1</sub></span> sau khi context chứa raw <span class="math">y<sub>0</sub></span> và revision instruction.</td><td>Phải giữ nguyên history thật; không tái tạo answer từ label.</td></tr>
+              <tr><td>Recovery</td><td>Initial wrong, revised correct: WC.</td><td>Là phần lợi ích mà self-correction tạo ra.</td></tr>
+              <tr><td>Regression</td><td>Initial correct, revised wrong: CW.</td><td>Là chi phí thường bị che khi chỉ xem successful corrections.</td></tr>
+              <tr><td>Flip</td><td>Parsed Yes/No thay đổi giữa hai rounds.</td><td>Flip có thể là recovery hoặc regression; bản thân flip không có valence.</td></tr>
+              <tr><td>Oracle leakage</td><td>Ground-truth label ảnh hưởng model-facing path hoặc item selection.</td><td>Làm setting không còn phản ánh inference khi không biết answer key.</td></tr>
+              <tr><td>Adaptation</td><td>Một replication có khác biệt vật chất về model, quantization, runtime, prompt hoặc subset.</td><td>Ngăn việc mô tả kết quả gần giống là exact reproduction.</td></tr>
+            </tbody>
+          </table>
         </div>
         <div class="comparison">
-          <div class="yes"><h3>Trong scope</h3><p>Same model, raw initial answer, neutral confirmatory prompt, sequential conversation history.</p></div>
-          <div class="no"><h3>Ngoài scope</h3><p>“You are wrong”, answer key, BoolQ passage, web/tool lookup, reward model, oracle-only revision.</p></div>
+          <div class="yes"><h3>Strict intrinsic condition</h3><p>Cùng một model tạo initial và revised answers. Revision chỉ thấy question, exact raw initial answer và neutral confirmatory prompt. Conversation history tăng tuần tự; không có correctness signal.</p></div>
+          <div class="no"><h3>Extrinsic hoặc biased condition</h3><p>“You are wrong”, answer key, BoolQ passage, web/tool lookup, reward model và oracle-only revision đều thêm thông tin hoặc selection signal. Các setting này có thể hữu ích, nhưng phải báo cáo tách biệt.</p></div>
         </div>
         <div class="flow" aria-label="Initial generation then revision flow">
           <div class="flow-node"><strong>Round 0 · initial</strong><span class="math">y<sub>0</sub> ∼ p<sub>θ</sub>(· | x)</span><br><small>Question x → raw assistant output.</small></div>
@@ -266,7 +437,7 @@
           <div class="flow-node"><strong>Round 1 · revised</strong><span class="math">y<sub>1</sub> ∼ p<sub>θ</sub>(· | x, y<sub>0</sub>, r)</span><br><small>Different conditional distribution.</small></div>
         </div>
         <div class="callout">
-          <strong>Key idea.</strong> Vì conditioning thay đổi, output flip tự nó không chứng minh model đã phát hiện lỗi hay có “stable internal belief” bị sửa.
+          <strong>Key idea.</strong> Hai outputs đến từ hai conditional distributions khác nhau. Vì conditioning đã đổi từ <span class="math">p(y|x)</span> sang <span class="math">p(y|x,y<sub>0</sub>,r)</span>, output flip tự nó không chứng minh model phát hiện lỗi, truy xuất thêm knowledge hay sửa một “stable internal belief”. Ta chỉ quan sát behavioral transition.
         </div>
         <details>
           <summary>Vì sao BoolQ passage không vào prompt?</summary>
@@ -280,7 +451,8 @@
         <div class="section-head">
           <p class="eyebrow"><span class="section-index">03</span> Metric playground</p>
           <h2>Transition matrix cho biết accuracy thay đổi vì đâu.</h2>
-          <p>Click một cell. Ma trận dùng correctness sau parsing; invalid/error vẫn tính là not-correct trong all-item metric.</p>
+          <p>Với item <span class="math">i</span> ở round <span class="math">t</span>, đặt <span class="math">c<sub>it</sub>=1</span> nếu parsed answer khớp ground truth và bằng 0 nếu sai, invalid hoặc error. Accuracy ở mỗi round là trung bình của cùng <span class="math">N</span> paired items: <span class="math">A<sub>t</sub> = N<sup>−1</sup>Σ<sub>i</sub>c<sub>it</sub></span>.</p>
+          <p>Ma trận dưới đây chia mọi trajectory vào đúng một trong bốn states. Click một cell để xem contribution của state đó vào accuracy và ΔA.</p>
         </div>
         <div class="matrix-layout">
           <div class="matrix" role="group" aria-label="Correctness transition matrix">
@@ -294,8 +466,8 @@
           </div>
           <aside class="explain-panel" id="transition-explanation" aria-live="polite">
             <span class="tag verified">CC · retained correctness</span>
-            <h3>Đáp án đúng giữ nguyên</h3>
-            <p><strong>4 samples.</strong> Đây là phần stable correctness. CC tăng cả A0 và A1 nhưng không đóng góp trực tiếp vào ΔA.</p>
+            <h3>Đáp án đúng được giữ lại</h3>
+            <p><strong>4 samples.</strong> Các item này đúng ở cả hai rounds. Chúng được tính trong cả A₀ và A₁ nên duy trì mức accuracy, nhưng tự triệt tiêu khi lấy A₁−A₀. CC vì thế là evidence về stability, không phải self-correction gain.</p>
             <p class="compact">Example: “Is New Zealand on the continent of Australia?” — <span class="mono">No → No</span>, label <span class="mono">No</span>.</p>
           </aside>
         </div>
@@ -304,19 +476,23 @@
           <div class="equation-block math">
             A<sub>0</sub> = (CC + CW) / N = (4 + 1) / 10 = 50%<br>
             A<sub>1</sub> = (CC + WC) / N = (4 + 0) / 10 = 40%<br>
-            ΔA = A<sub>1</sub> − A<sub>0</sub> = (WC − CW) / N = (0 − 1) / 10 = −10%
+            ΔA = A<sub>1</sub> − A<sub>0</sub> = (WC − CW) / N = (0 − 1) / 10 = −10%<br><br>
+            A<sub>1</sub> = A<sub>0</sub>(1 − v) + (1 − A<sub>0</sub>)u<br>
+            ΔA = (1 − A<sub>0</sub>)u − A<sub>0</sub>v
           </div>
+          <p>Hai dòng cuối cho thấy điều quan trọng hơn việc so sánh trực tiếp <span class="math">u</span> và <span class="math">v</span>. Recovery chỉ có thể tác động lên phần initial-wrong <span class="math">(1−A<sub>0</sub>)</span>, còn regression tác động lên phần initial-correct <span class="math">A<sub>0</sub></span>. Khi initial accuracy cao, một regression rate nhỏ vẫn có thể xóa lợi ích của recovery rate lớn hơn.</p>
           <div class="two-col compact">
             <div><strong>Conditional recovery.</strong> <span class="math">u = WC / (WC + WW) = 0 / 5 = 0%</span>. Trong các initial-wrong items, không item nào được sửa.</div>
             <div><strong>Conditional regression.</strong> <span class="math">v = CW / (CC + CW) = 1 / 5 = 20%</span>. Trong các initial-correct items, 1/5 bị đảo sai.</div>
-            <div><strong>Answer-change rate.</strong> Tỷ lệ parsed answers khác nhau giữa hai rounds: 1/10 = 10%.</div>
-            <div><strong>Valid-only accuracy.</strong> Báo cáo secondary; denominator chỉ gồm parsed valid outputs. Ở run này nó bằng all-item vì không có invalid/error.</div>
+            <div><strong>Answer-change rate.</strong> Tỷ lệ parsed answers khác nhau giữa hai rounds: 1/10 = 10%. Metric này đo instability, không đo improvement.</div>
+            <div><strong>Valid-only accuracy.</strong> Denominator chỉ gồm parsed valid outputs. Nó phải là secondary metric vì loại invalid/error có thể làm task trông dễ hơn. Ở run này nó bằng all-item do không có invalid/error.</div>
           </div>
         </details>
         <details>
           <summary>McNemar và bootstrap CI nói gì?</summary>
           <p><strong>Exact two-sided McNemar</strong> chỉ dùng discordant pairs: CW và WC. Under no directional difference, mỗi discordant pair có xác suất 1/2 đi theo mỗi hướng. Ở đây có đúng một discordant pair, CW=1 và WC=0, nên <span class="mono">p=1</span>: dữ liệu quá ít để có evidence về directional effect.</p>
           <p><strong>Paired bootstrap</strong> resample 10 paired trajectories 10,000 lần, không phá pairing giữa round 0 và round 1. CI 95% của ΔA là <span class="mono">[−30%, 0%]</span>. Wide interval là expected với n=10.</p>
+          <p><strong>Cách đọc cùng nhau.</strong> Point estimate mô tả điều đã xảy ra trong snapshot; confidence interval mô tả độ bất định khi ngoại suy từ sample; McNemar kiểm tra imbalance giữa hai loại discordant transitions. <span class="mono">p=1</span> không chứng minh “không có effect” — nó chỉ cho thấy một discordant pair không đủ để phân biệt signal với sampling variation.</p>
         </details>
       </div>
     </section>
@@ -325,13 +501,14 @@
       <div class="wrap">
         <div class="section-head">
           <p class="eyebrow"><span class="section-index">04</span> Experiment run</p>
-          <h2>Small, deterministic, and auditable.</h2>
-          <p>Đây là adaptation, không phải exact reproduction: model family, GGUF Q8, Ollama runtime/template và 10-item subset đều khác paper setting.</p>
+          <h2>Smoke run kiểm tra measurement pipeline trước khi kiểm tra hypothesis.</h2>
+          <p>Mục tiêu của 10-item run không phải ước lượng effect size. Nó kiểm tra xem experiment có thực hiện đúng intervention, giữ đúng denominator, lưu đủ evidence và resume mà không gọi model trùng hay không. Chỉ khi các invariants này đúng thì run lớn hơn mới có giá trị khoa học.</p>
+          <p>Run được ghi là <strong>adaptation</strong>, không phải exact reproduction: model family, GGUF Q8, Ollama runtime/template và 10-item subset đều khác paper setting. Những khác biệt này có thể thay đổi behavior nên phải nằm trong interpretation boundary.</p>
         </div>
         <div class="three-col">
-          <article class="card"><h3>Data</h3><p><strong>10</strong> label-stratified samples từ BoolQ validation (3,270 source items). Một initial và một confirmatory revision mỗi sample.</p></article>
-          <article class="card"><h3>Model</h3><p><code>qwen2.5:3b-instruct-q8_0</code><br>Ollama · Q8_0 · local WSL2 run.</p></article>
-          <article class="card"><h3>Decoding</h3><p><code>temperature=0</code><br><code>seed=20260912</code><br><code>num_predict=4</code></p></article>
+          <article class="card"><h3>Data</h3><p><strong>10</strong> label-stratified samples được chọn deterministically từ 3,270 BoolQ validation records. Label stratification cân bằng số Yes/No labels trong subset, nhưng không đảm bảo cân bằng topic, ambiguity hoặc question difficulty.</p></article>
+          <article class="card"><h3>Model</h3><p><code>qwen2.5:3b-instruct-q8_0</code> chạy local qua Ollama trên WSL2. Q8_0 phù hợp hardware hiện có, nhưng quantization và chat template khiến kết quả trở thành model/runtime adaptation.</p></article>
+          <article class="card"><h3>Decoding</h3><p><code>temperature=0</code>, <code>seed=20260912</code>, <code>num_predict=4</code>. Deterministic settings giảm sampling variance và giúp debug; chúng không bảo đảm bitwise reproducibility trên mọi runtime/hardware.</p></article>
         </div>
         <div class="two-col" style="margin-top:1rem">
           <article class="card">
@@ -342,10 +519,11 @@
           <article class="card">
             <h3>Audit guarantees</h3>
             <ul class="compact">
-              <li>Không label hoặc passage trong backend messages.</li>
-              <li>Mọi item nhận revision, không consult correctness.</li>
-              <li>Append-only JSONL; retry chỉ transport/server failure.</li>
-              <li>Resume index theo deterministic request ID; zero duplicate calls.</li>
+              <li>Không có label hoặc passage trong model-facing messages.</li>
+              <li>Mọi item đều nhận revision; initial correctness không quyết định execution path.</li>
+              <li>Raw outputs và exact request/response metadata được giữ trong append-only JSONL.</li>
+              <li>Retry chỉ dành cho transient transport/server failure, không retry invalid model answer.</li>
+              <li>Deterministic request ID cho phép resume với zero duplicate model calls.</li>
             </ul>
           </article>
         </div>
@@ -357,17 +535,17 @@
         <div class="section-head">
           <p class="eyebrow"><span class="section-index">05</span> Smoke result</p>
           <h2>Một flip; flip đó là regression.</h2>
-          <p><span class="tag verified">Verified artifact</span> Kết quả dưới đây là snapshot từ journal đã validate, không phải claim tổng quát về Qwen hay self-correction.</p>
+          <p><span class="tag verified">Verified artifact</span> Kết quả dưới đây là snapshot từ journal đã validate. Vì mỗi sample chiếm 10 percentage points khi <span class="mono">N=10</span>, một single transition đã đủ làm ΔA thay đổi −10 điểm. Đây là lý do không được diễn giải magnitude của smoke run như một stable effect size.</p>
         </div>
         <div class="result-banner">
           <div>
             <p class="headline" id="delta-value">ΔA = −10%</p>
-            <p>Initial accuracy 50% giảm thành revised accuracy 40%. Công thức kiểm tra: <span class="math">(WC − CW) / N = (0 − 1) / 10</span>.</p>
+            <p>Initial accuracy là 50% và revised accuracy là 40%. Không có initial-wrong item nào recovered; một trong năm initial-correct items bị đảo sai. Vì vậy toàn bộ observed decrease đến từ đúng một CW transition: <span class="math">(WC − CW) / N = (0 − 1) / 10</span>.</p>
             <div class="toggle" role="group" aria-label="Accuracy denominator">
               <button type="button" data-view="all" aria-pressed="true">All items</button>
               <button type="button" data-view="valid" aria-pressed="false">Valid only</button>
             </div>
-            <p id="denominator-note" class="compact" style="margin-top:.7rem">All 10 samples remain in denominator. Invalid/error count = 0.</p>
+            <p id="denominator-note" class="compact" style="margin-top:.7rem">Cả 10 samples được giữ trong denominator. Số invalid/error bằng 0.</p>
           </div>
           <div>
             <div class="stat-line"><span>A<sub>0</sub></span><strong id="a0-value">50%</strong></div>
@@ -383,9 +561,9 @@
           <article class="metric"><span class="label">Cost trace</span><span class="value">1.27 s</span><span class="detail">1,332 input + 40 output tokens</span></article>
         </div>
         <div class="claims" style="margin-top:1.2rem">
-          <div class="claim verified"><span class="tag verified">Verified</span> Initial output là <code>No</code> cho cả 10 samples; only one parsed answer changed.</div>
-          <div class="claim interpretation"><span class="tag interpretation">Interpretation</span> Đây là strong <code>No</code> response tendency trong snapshot này.</div>
-          <div class="claim hypothesis"><span class="tag hypothesis">Not yet known</span> Không biết tendency này đến từ prompt, model, selected sample, quantization, chat template hay interaction của chúng.</div>
+          <div class="claim verified"><span class="tag verified">Verified</span> Initial output là <code>No</code> cho cả 10 samples. Across both rounds, 19/20 outputs là <code>No</code>; chỉ một parsed answer thay đổi.</div>
+          <div class="claim interpretation"><span class="tag interpretation">Interpretation</span> Snapshot cho thấy strong <code>No</code> response tendency. Tendency này giải thích tại sao năm positive-label items đều initial-wrong, nhưng chưa giải thích nguyên nhân của tendency.</div>
+          <div class="claim hypothesis"><span class="tag hypothesis">Not yet known</span> Candidate explanations gồm prompt phrasing, model prior, properties của selected subset, Q8 quantization, Ollama chat template hoặc interaction giữa chúng. Cần controlled comparisons để phân biệt.</div>
         </div>
       </div>
     </section>
@@ -467,12 +645,13 @@
         <div class="section-head">
           <p class="eyebrow"><span class="section-index">08</span> Interpretation & limitations</p>
           <h2>Integrity pass không phải scientific pass.</h2>
+          <p>Smoke run cung cấp evidence rằng harness thực hiện đúng protocol đã định nghĩa. Nó chưa cung cấp đủ precision, breadth hoặc controls để trả lời self-correction có lợi hay hại nói chung. Tách hai loại “pass” này giúp tránh biến engineering success thành scientific conclusion.</p>
         </div>
         <div class="two-col">
           <div class="claims">
-            <div class="claim verified"><span class="tag verified">Verified</span> 20 terminal events, 10 unique samples, zero duplicate request IDs, zero parser errors; resume tạo zero model calls.</div>
-            <div class="claim interpretation"><span class="tag interpretation">Interpretation</span> Snapshot có strong <code>No</code> tendency. Nó giải thích observed outcomes, nhưng chưa chỉ ra mechanism.</div>
-            <div class="claim hypothesis"><span class="tag hypothesis">Hypothesis</span> Balanced prompt audit hoặc candidate logprob analysis có thể phân biệt response bias với sample/model effects.</div>
+            <div class="claim verified"><span class="tag verified">Verified</span> Có 20 terminal events cho 10 unique samples, zero duplicate request IDs và zero parser errors. Chạy lại cùng run ID tạo zero model calls. Đây là evidence về data integrity và resumability.</div>
+            <div class="claim interpretation"><span class="tag interpretation">Interpretation</span> Snapshot có strong <code>No</code> tendency. Observation này mô tả output distribution, nhưng không đủ để kết luận mechanism hay general behavior của model.</div>
+            <div class="claim hypothesis"><span class="tag hypothesis">Hypothesis</span> Balanced prompt audit, candidate-sequence scoring hoặc prompt variants có thể giúp phân biệt response-format bias với sample/model effects. Mỗi phương án cần được preregister trước khi xem kết quả.</div>
           </div>
           <div class="callout warning">
             <h3>Không được kết luận</h3>
@@ -482,24 +661,74 @@
               <li>Observed regression do một nguyên nhân cụ thể.</li>
               <li>Historical paper result được reproduced exactly.</li>
             </ul>
-            <p class="compact">Limits: n=10; một model; adaptation; passage omitted; chưa có independent resampling baseline, mitigation condition hay 300-item estimate.</p>
+            <p class="compact">Limits: n=10; một model; một deterministic replicate; adaptation; passage omitted; chưa có independent resampling baseline, mitigation condition, prompt robustness check hay 300-item estimate.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="discussion">
+    <section class="section" id="requirements">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow"><span class="section-index">09</span> Supervisor discussion</p>
-          <h2>Questions for the next gate.</h2>
-          <p>Artifact này đóng scope ở smoke integrity. Experiment tiếp theo sẽ ở HTML artifact riêng.</p>
+          <p class="eyebrow"><span class="section-index">09</span> Research requirements</p>
+          <h2>Điều gì phải đúng trước khi hướng này có một claim đáng bảo vệ?</h2>
+          <p>Replication harness là nền móng, không phải novelty. Research value chỉ xuất hiện khi study đặt một claim cụ thể, thiết kế experiment có thể bác bỏ claim đó và loại được các alternative explanations quan trọng.</p>
+        </div>
+        <div class="two-col">
+          <article class="card">
+            <h3>1. Construct validity</h3>
+            <p>Core condition phải thật sự là intrinsic: không ground-truth signal, không passage, không verifier và không oracle selection. Revision phải áp dụng cho mọi item bằng exact prior output.</p>
+          </article>
+          <article class="card">
+            <h3>2. Measurement validity</h3>
+            <p>Parser policy phải được khóa trước inference. Invalid outputs và request errors phải được giữ trong primary denominator; valid-only results chỉ dùng để chẩn đoán compliance.</p>
+          </article>
+          <article class="card">
+            <h3>3. Fair comparison</h3>
+            <p>Các conditions phải dùng cùng sample IDs, model identity và decoding policy. Independent resampling baseline phải được match theo số calls và, khi khả thi, generated-token budget.</p>
+          </article>
+          <article class="card">
+            <h3>4. Paired inference</h3>
+            <p>Primary estimand là paired ΔA trên all items. Report CC/CW/WC/WW, conditional rates, exact McNemar và paired confidence interval; không chỉ báo cáo revised accuracy.</p>
+          </article>
+          <article class="card">
+            <h3>5. Robustness</h3>
+            <p>Effect cần được kiểm tra qua prompt formulations, relevant model settings và stochastic replicates nếu sampling được dùng. Misleading feedback phải tách khỏi neutral confirmatory condition.</p>
+          </article>
+          <article class="card">
+            <h3>6. Interpretation boundary</h3>
+            <p>Behavioral transitions chỉ support behavioral claims. Muốn claim về internal uncertainty, belief revision hoặc prompt mechanism cần evidence bổ sung và controls tương ứng.</p>
+          </article>
+        </div>
+        <details open>
+          <summary>Next evidence ladder</summary>
+          <ol class="question-list">
+            <li><strong>300-item confirmatory gate:</strong> ước lượng transition prevalence và uncertainty trên preregistered subset; không thay failed/invalid samples.</li>
+            <li><strong>Question-repeat comparison:</strong> dùng đúng 300 sample IDs để kiểm tra mitigation có giảm CW mà vẫn giữ WC hay không.</li>
+            <li><strong>Compute-matched baseline:</strong> so revision với independent second sample dưới cùng call/token budget để biết gain có thực sự đến từ refinement.</li>
+            <li><strong>Mechanism audit:</strong> chỉ thêm candidate scoring, prompt-bias probes hoặc trajectory analysis sau khi behavioral effect đủ ổn định để đáng giải thích.</li>
+          </ol>
+        </details>
+        <div class="callout">
+          <h3>Novelty threshold</h3>
+          <p>Việc chạy lại BoolQ không tự tạo novelty. Một contribution có thể hình thành nếu study chứng minh được một evaluator artifact chưa được kiểm soát, một mechanism có evidence vượt behavioral correlation, hoặc một mitigation giữ được recovery trong khi giảm regression dưới fair comparisons. Trước khi gọi bất kỳ hướng nào là novel, phải kiểm tra closest prior work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="discussion">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="eyebrow"><span class="section-index">10</span> Supervisor discussion</p>
+          <h2>Các quyết định cần chốt cho bước nghiên cứu tiếp theo.</h2>
+          <p>Artifact này dừng ở smoke integrity. Experiment tiếp theo sẽ có preregistration và HTML artifact riêng; các câu hỏi dưới đây xác định claim nào đáng ưu tiên.</p>
         </div>
         <ol class="question-list">
-          <li>Integrity evidence hiện tại đủ để chuyển sang 300-item confirmatory run chưa?</li>
-          <li>Nên ưu tiên cùng 300 samples với <em>question repetition</em>, hay complete 300-item confirmatory trước?</li>
-          <li>Response bias có cần audit bằng balanced prompts hoặc candidate logprobs trước khi diễn giải transition rates?</li>
-          <li>Experiment tiếp theo nên target mechanism, mitigation, hay compute-matched resampling baseline?</li>
+          <li>Integrity evidence hiện tại đã đủ để khóa protocol và chạy 300-item confirmatory gate chưa?</li>
+          <li>Primary claim nên tập trung vào net harm, recovery–regression trade-off, hay evaluator sensitivity?</li>
+          <li>Nên hoàn tất 300-item confirmatory estimate trước, hay preregister confirmatory và question-repeat như một paired comparison ngay từ đầu?</li>
+          <li>Strong <code>No</code> tendency cần một prompt-bias control trước khi diễn giải transition rates ở quy mô lớn không?</li>
+          <li>Independent resampling baseline có phải điều kiện bắt buộc cho claim về lợi ích của refinement không?</li>
         </ol>
       </div>
     </section>
@@ -507,7 +736,7 @@
     <section class="section alt" id="appendix">
       <div class="wrap">
         <div class="section-head">
-          <p class="eyebrow"><span class="section-index">10</span> Appendix · reproducibility</p>
+          <p class="eyebrow"><span class="section-index">11</span> Appendix · reproducibility</p>
           <h2>What exactly ran?</h2>
         </div>
         <details open>
@@ -558,10 +787,10 @@ uv run python -m self_correction.cli aggregate runs/&lt;run_id&gt;</code></pre>
     (() => {
       const snapshot = JSON.parse(document.getElementById('run-snapshot').textContent);
       const explanations = {
-        CC: { tag: 'verified', label: 'CC · retained correctness', title: 'Đáp án đúng giữ nguyên', text: '<strong>4 samples.</strong> CC tăng cả A0 và A1 nhưng không đóng góp trực tiếp vào ΔA.', example: 'Example: “Is New Zealand on the continent of Australia?” — <span class="mono">No → No</span>, label <span class="mono">No</span>.' },
-        CW: { tag: 'risk', label: 'CW · regression', title: 'Đáp án đúng bị đảo sai', text: '<strong>1 sample.</strong> CW làm A1 giảm và là toàn bộ lý do ΔA âm trong run này.', example: 'Example: trachea question — <span class="mono">No → Yes</span>, label <span class="mono">No</span>.' },
-        WC: { tag: 'adaptation', label: 'WC · recovery', title: 'Đáp án sai được sửa', text: '<strong>0 samples.</strong> Không có recovery trong snapshot. Count zero không chứng minh recovery impossible.', example: 'Không có raw example vì WC=0.' },
-        WW: { tag: 'interpretation', label: 'WW · persisted error', title: 'Đáp án sai giữ nguyên', text: '<strong>5 samples.</strong> WW không đổi accuracy qua rounds, nhưng cho biết revision chưa sửa initial error.', example: 'Example: Rampage question — <span class="mono">No → No</span>, label <span class="mono">Yes</span>.' }
+        CC: { tag: 'verified', label: 'CC · retained correctness', title: 'Đáp án đúng được giữ lại', text: '<strong>4 samples.</strong> Các item này đúng ở cả hai rounds. Chúng được tính trong cả A₀ và A₁ nên duy trì mức accuracy, nhưng tự triệt tiêu khi lấy A₁−A₀. CC vì thế là evidence về stability, không phải self-correction gain.', example: 'Example: “Is New Zealand on the continent of Australia?” — <span class="mono">No → No</span>, label <span class="mono">No</span>.' },
+        CW: { tag: 'risk', label: 'CW · regression', title: 'Đáp án đúng bị revision phá hỏng', text: '<strong>1 sample.</strong> Item này đúng trước intervention nhưng sai sau intervention. Mỗi CW trừ một đơn vị khỏi net change. Vì run không có WC, CW duy nhất này là toàn bộ nguyên nhân observed ΔA bằng −10%.', example: 'Example: trachea question — <span class="mono">No → Yes</span>, label <span class="mono">No</span>.' },
+        WC: { tag: 'adaptation', label: 'WC · recovery', title: 'Đáp án sai được revision sửa đúng', text: '<strong>0 samples.</strong> WC là benefit trực tiếp mà self-correction được kỳ vọng tạo ra: mỗi WC cộng một đơn vị vào net change. Không quan sát thấy WC trong 10 items chỉ mô tả snapshot này; count zero không chứng minh recovery không thể xảy ra.', example: 'Không có raw example trong audit subset vì observed WC=0.' },
+        WW: { tag: 'interpretation', label: 'WW · persisted error', title: 'Đáp án sai vẫn sai sau revision', text: '<strong>5 samples.</strong> Các item này sai ở cả hai rounds nên không làm ΔA tăng hay giảm. Tuy nhiên, chúng cho biết confirmatory prompt đã không phục hồi bất kỳ initial error nào trong snapshot và giúp xác định denominator của conditional recovery.', example: 'Example: Rampage question — <span class="mono">No → No</span>, label <span class="mono">Yes</span>.' }
       };
       const panel = document.getElementById('transition-explanation');
       document.querySelectorAll('.matrix button[data-transition]').forEach(button => button.addEventListener('click', () => {
@@ -575,7 +804,7 @@ uv run python -m self_correction.cli aggregate runs/&lt;run_id&gt;</code></pre>
         document.querySelectorAll('[data-view]').forEach(control => control.setAttribute('aria-pressed', String(control === button)));
         document.getElementById('a0-value').textContent = `${Math.round((valid ? snapshot.metrics.valid_A0 : snapshot.metrics.A0) * 100)}%`;
         document.getElementById('a1-value').textContent = `${Math.round((valid ? snapshot.metrics.valid_A1 : snapshot.metrics.A1) * 100)}%`;
-        document.getElementById('denominator-note').textContent = valid ? 'Valid-only denominator: 10 at round 0 and 10 at round 1. Same values because all outputs parsed valid.' : 'All 10 samples remain in denominator. Invalid/error count = 0.';
+        document.getElementById('denominator-note').textContent = valid ? 'Valid-only denominator gồm 10 outputs ở mỗi round. Kết quả không đổi vì cả 20 outputs đều parse hợp lệ.' : 'Cả 10 samples được giữ trong denominator. Số invalid/error bằng 0.';
       }));
       document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
         const filter = button.dataset.filter;
